@@ -1,4 +1,4 @@
--- VIetnam
+-- Vietnam
 
 Obfucator sẽ dễ mắc sai lầm và điểm yếu khi obf và dùng table để lưu biến cache
 
@@ -32,7 +32,7 @@ end end end
 
 local a.a(2,2,4,"Hitbox") -- biến dạng/ẩn hiệu quả
 
--- lỗi thứ 2 là ko áp dụng lazy decode
+-- lỗi thứ 2 là ko áp dụng lazy decode -- cache lazy decode chỉ áp dụng với các plant text hoặc các key chứa ... làm tăng GC
 code mà cứ decode liên tục sẽ dẫn đến cpu tăng cao lag 
 
 -- obf rename full local / global hiệu quả thì cần thu thập full api function 
@@ -50,3 +50,24 @@ return v
 end end end
 
 
+-- No
+
+local function dispatch(key, ...)
+    return if key == 917 then
+        getHello(...)
+    elseif key == 428 then
+        getChest(...)
+    else
+        nil
+end
+
+-- Yes
+
+local function dispatch(key, a, b, c, d)
+    return if key == 917 then
+        getHello(a)
+    elseif key == 428 then
+        getChest(a, b, c, d)
+    else
+        nil
+end
