@@ -71,3 +71,6 @@ local function dispatch(key, a, b, c, d)
     else
         nil
 end
+
+-- có nên dùng key xor
+key xor đối với hiện tại thì vô cùng lỏ, tại tool bây giờ nó giải key xor như đồ chơi 
