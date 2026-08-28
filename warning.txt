@@ -1,0 +1,52 @@
+-- VIetnam
+
+Obfucator sẽ dễ mắc sai lầm và điểm yếu khi obf và dùng table để lưu biến cache
+
+a={
+[1]="print",
+[2]='hello world',
+}
+
+reverse có thể dump 1 lượt a-z trên table
+
+thay vào đó chúng ta có thể dùng  function để truyền vào - các hàm modun chức năng
+
+hàm góc
+
+function getchest(x)
+for _,v in pairs(game.Workspace:GetChildren()) do
+if v.Name=="Chest" and v:FindFirstChild(x) then
+return v
+end end end
+
+-- obf
+
+a={
+a = funciton(a,b,c,d) -- a,b,c= key, d = x
+local j = if a+b==c then {"Chest",d,game.Workspace}
+for _,v in pairs(j[3]:GetChildren()) do
+if v.Name==j[1] and v:FindFirstChild(j[2]) then
+return v
+end end end
+}
+
+local a.a(2,2,4,"Hitbox") -- biến dạng/ẩn hiệu quả
+
+-- lỗi thứ 2 là ko áp dụng lazy decode
+code mà cứ decode liên tục sẽ dẫn đến cpu tăng cao lag 
+
+-- obf rename full local / global hiệu quả thì cần thu thập full api function 
+
+-- điều cuối, có thể gôm all function vào 1 function, dùng key đầu để control
+
+function a(x,...)
+d={...}
+if x == 1 then
+return "hello"
+elseif x==2 then
+for _,v in pairs(game.Workspace:GetChildren()) do
+if v.Name=="Chest" and v:FindFirstChild(d[1]) then
+return v
+end end end
+
+
