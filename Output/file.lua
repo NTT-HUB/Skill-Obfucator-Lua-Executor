@@ -1,3 +1,2312 @@
---Version 5.1
-_G.credit=[[Obfucator NTT - https://nttobf.com]]
-return({XKB={((147258)/27),((455190+5856)-455190),((55029+1848)-55029),((762512+2050)-762512),((40688)/8),((908698+4381)-908698),(9306-3728)},KzM=((((getfenv and getfenv(1))or _ENV or _G))["\115\116\114\105\110\103"]or string),LOio=((((getfenv and getfenv(1))or _ENV or _G))["\116\097\098\108\101"]or table),pc=(function()local E=((getfenv and getfenv(1))or _ENV or _G);local N=E["\098\105\116\051\050"]or bit32;if N and N["\098\120\111\114"] and N["\098\097\110\100"] and N["\114\115\104\105\102\116"] then return N end;local X={};for a=0,15 do X[a]={};for b=0,15 do local r=0;local aa=a;local bb=b;local p=1;for i=1,4 do local av=aa%2;local bv=bb%2;if av~=bv then r=r+p end;aa=(aa-av)/2;bb=(bb-bv)/2;p=p*2 end;X[a][b]=r end end;local function bx(a,b)a=a or 0;b=b or 0;local r=0;local p=1;a=a%4294967296;b=b%4294967296;while a>0 or b>0 do local an=a%16;local bn=b%16;r=r+(X[an][bn]or 0)*p;a=(a-an)/16;b=(b-bn)/16;p=p*16 end;return r end;local function ba(a,b)a=a or 0;b=b or 0;local r=0;local p=1;a=a%4294967296;b=b%4294967296;while a>0 and b>0 do local av=a%2;local bv=b%2;if av==1 and bv==1 then r=r+p end;a=(a-av)/2;b=(b-bv)/2;p=p*2 end;return r end;local function rs(a,n)a=(a or 0)%4294967296;n=n or 0;return math["\102\108\111\111\114"](a/(2^n))end;return{bxor=bx,band=ba,rshift=rs,[29]=X}end)(),IZ=(function()local E=((getfenv and getfenv(1))or _ENV or _G);local T=(E["\116\097\098\108\101"]or table);local u=(T and T["\117\110\112\097\099\107"])or E["\117\110\112\097\099\107"];if u then return u end;local function r(a,i,j)i=i or 1;j=j or#a;if i>j then return end;return a[i],r(a,i+1,j)end;return r end)(),vZs=((((getfenv and getfenv(1))or _ENV or _G))["\116\121\112\101"]or type),RR5G=((getfenv and getfenv(1))or _ENV or _G),mLK="OTSp20Zn",z1=((9828150)/30),jj="Ur,6d~#gX&=AlR_I;TwbkEx>!t-Z5QW][?KN*82h7(3n:cv+zCmV.o|/yDP{e}4^pusSOaG0$`j9iFfMq1L%J",NsW=function(RyZ4)local M={}local C=RyZ4.jj for i=1,#C do M[RyZ4.KzM["\098\121\116\101"](C,i)]=i-1 end RyZ4.Si8N=M return M end,si=function(RyZ4,ch)local R=RyZ4.Si8N or RyZ4:NsW()return R[RyZ4.KzM["\098\121\116\101"](ch)]or 0 end,uPsj=function(RyZ4,mode,s)local AAp={};local VXO={};local xi=1;local xW8=4;local TzeZ=RyZ4.Si8N or RyZ4:NsW()local ho64x=TzeZ[RyZ4.KzM["\098\121\116\101"](s,1)]or 0;local IJ=TzeZ[RyZ4.KzM["\098\121\116\101"](s,2)]or 0;local JdK=TzeZ[RyZ4.KzM["\098\121\116\101"](s,3)]or 0 local fWbP=(ho64x+JdK+IJ)%4 if fWbP~=0 then return nil end while xW8<=#s do local LP=0;for bhaG7=0,4 do LP=LP*85+(TzeZ[RyZ4.KzM["\098\121\116\101"](s,xW8+bhaG7)]or 0)end AAp[xi]=RyZ4.pc["\098\097\110\100"](RyZ4.pc["\114\115\104\105\102\116"](LP,24),255);xi=xi+1 AAp[xi]=RyZ4.pc["\098\097\110\100"](RyZ4.pc["\114\115\104\105\102\116"](LP,16),255);xi=xi+1 AAp[xi]=RyZ4.pc["\098\097\110\100"](RyZ4.pc["\114\115\104\105\102\116"](LP,8),255);xi=xi+1 AAp[xi]=RyZ4.pc["\098\097\110\100"](LP,255);xi=xi+1;xW8=xW8+5 end for bhaG7=1,IJ do AAp[#AAp]=nil end if mode==0 then return AAp,ho64x,JdK end for bhaG7=1,#AAp do do local XBT1=(ho64x*3+JdK+((bhaG7*19+((bhaG7*JdK)%251))%256))%256 local tr=RyZ4.pc["\098\120\111\114"](AAp[bhaG7],XBT1);VXO[bhaG7]=RyZ4.KzM["\099\104\097\114"](tr);ho64x=(RyZ4.pc["\098\120\111\114"](ho64x,(tr+13)%256)+bhaG7*33+JdK)%256 end end return RyZ4.LOio["\099\111\110\099\097\116"](VXO)end,vTYj=function(RyZ4,mode,s)local hUcS={};local wW5I={};local khWZ=1;local ss=4;local QJ=RyZ4.Si8N or RyZ4:NsW()local Qc=QJ[RyZ4.KzM["\098\121\116\101"](s,1)]or 0;local qCxN=QJ[RyZ4.KzM["\098\121\116\101"](s,2)]or 0;local qIfEK=QJ[RyZ4.KzM["\098\121\116\101"](s,3)]or 0 local XmT=(Qc+qIfEK+qCxN)%4 if XmT~=1 then return nil end if ss<=#s then repeat local DIdjY=0;for eG=0,4 do DIdjY=(DIdjY*85)+(QJ[RyZ4.KzM["\098\121\116\101"](s,ss+eG)]or 0)end hUcS[khWZ]=RyZ4.pc["\098\097\110\100"](RyZ4.pc["\114\115\104\105\102\116"](DIdjY,24),255);khWZ=khWZ+1 hUcS[khWZ]=RyZ4.pc["\098\097\110\100"](RyZ4.pc["\114\115\104\105\102\116"](DIdjY,16),255);khWZ=khWZ+1 hUcS[khWZ]=RyZ4.pc["\098\097\110\100"](RyZ4.pc["\114\115\104\105\102\116"](DIdjY,8),255);khWZ=khWZ+1 hUcS[khWZ]=RyZ4.pc["\098\097\110\100"](DIdjY,255);khWZ=khWZ+1;ss=ss+5 until ss>#s end for eG=1,qCxN do hUcS[#hUcS]=nil end if mode==0 then return hUcS,Qc,qIfEK end for eG=1,#hUcS do do local z7b=RyZ4.pc["\098\120\111\114"](Qc,(eG*19+qIfEK+((eG*qIfEK)%251))%256)local Hj=RyZ4.pc["\098\120\111\114"](hUcS[eG],z7b);wW5I[eG]=RyZ4.KzM["\099\104\097\114"](Hj);Qc=(Qc+Hj*97+eG+qIfEK)%256 end end return RyZ4.LOio["\099\111\110\099\097\116"](wW5I)end,QzL=function(RyZ4,mode,s)local puXA={};local zhQ0T={};local tg6=1;local ee=4;local HFal=RyZ4.Si8N or RyZ4:NsW()local fP=HFal[RyZ4.KzM["\098\121\116\101"](s,1)]or 0;local sqE=HFal[RyZ4.KzM["\098\121\116\101"](s,2)]or 0;local Zfy=HFal[RyZ4.KzM["\098\121\116\101"](s,3)]or 0 local mwUEk=(fP+Zfy+sqE)%4 if mwUEk~=2 then return nil end while ee<=#s do local Goe=0;for gg=0,4 do Goe=Goe*85+(HFal[RyZ4.KzM["\098\121\116\101"](s,ee+gg)]or 0)end puXA[tg6]=RyZ4.pc["\098\097\110\100"](RyZ4.pc["\114\115\104\105\102\116"](Goe,24),255);tg6=tg6+1 puXA[tg6]=RyZ4.pc["\098\097\110\100"](RyZ4.pc["\114\115\104\105\102\116"](Goe,16),255);tg6=tg6+1 puXA[tg6]=RyZ4.pc["\098\097\110\100"](RyZ4.pc["\114\115\104\105\102\116"](Goe,8),255);tg6=tg6+1 puXA[tg6]=RyZ4.pc["\098\097\110\100"](Goe,255);tg6=tg6+1;ee=ee+5 end for gg=1,sqE do puXA[#puXA]=nil end if mode==0 then return puXA,fP,Zfy end for gg=1,#puXA do do local GhLZ=(fP+gg*11+Zfy+((gg*Zfy)%251))%256 local vuu=RyZ4.pc["\098\120\111\114"](puXA[gg],GhLZ);zhQ0T[gg]=RyZ4.KzM["\099\104\097\114"](vuu);fP=(fP*97+gg+Zfy+(vuu%11))%256 end end return RyZ4.LOio["\099\111\110\099\097\116"](zhQ0T)end,ym=function(RyZ4,mode,s)local SV={};local is={};local dXUF=1;local Z6=4;local Bfj=RyZ4.Si8N or RyZ4:NsW()local Ci8Tw=Bfj[RyZ4.KzM["\098\121\116\101"](s,1)]or 0;local pIK=Bfj[RyZ4.KzM["\098\121\116\101"](s,2)]or 0;local Przwy=Bfj[RyZ4.KzM["\098\121\116\101"](s,3)]or 0 local hr=(Ci8Tw+Przwy+pIK)%4 if hr~=3 then return nil end if Z6<=#s then repeat local gYHY=0;for hyVU9=0,4 do gYHY=(gYHY*85)+(Bfj[RyZ4.KzM["\098\121\116\101"](s,Z6+hyVU9)]or 0)end SV[dXUF]=RyZ4.pc["\098\097\110\100"](RyZ4.pc["\114\115\104\105\102\116"](gYHY,24),255);dXUF=dXUF+1 SV[dXUF]=RyZ4.pc["\098\097\110\100"](RyZ4.pc["\114\115\104\105\102\116"](gYHY,16),255);dXUF=dXUF+1 SV[dXUF]=RyZ4.pc["\098\097\110\100"](RyZ4.pc["\114\115\104\105\102\116"](gYHY,8),255);dXUF=dXUF+1 SV[dXUF]=RyZ4.pc["\098\097\110\100"](gYHY,255);dXUF=dXUF+1;Z6=Z6+5 until Z6>#s end for hyVU9=1,pIK do SV[#SV]=nil end if mode==0 then return SV,Ci8Tw,Przwy end for hyVU9=1,#SV do do local Zfgj=(hyVU9*17+Przwy+((hyVU9+Przwy)%241))%256 local DsHWy=RyZ4.pc["\098\120\111\114"]((Ci8Tw+Zfgj)%256,(Przwy*19+hyVU9*7)%256)local mB3=RyZ4.pc["\098\120\111\114"](SV[hyVU9],DsHWy);is[hyVU9]=RyZ4.KzM["\099\104\097\114"](mB3);Ci8Tw=RyZ4.pc["\098\120\111\114"]((Ci8Tw+RyZ4.pc["\098\120\111\114"](mB3,Przwy)*65+hyVU9*3)%256,Zfgj)%256 end end return RyZ4.LOio["\099\111\110\099\097\116"](is)end,VVj=function(RyZ4,s)local C=RyZ4.KN9l;if C then local V=C[s];if V~=nil then return V end end local H=RyZ4.mtObnc6z or{};RyZ4.mtObnc6z=H;H[s]=(H[s]or 0)+1;local R=RyZ4:uPsj(1,s)if H[s]>=2 then C=C or{};RyZ4.KN9l=C;C[s]=R end;return R end,YC=function(RyZ4,s)local C=RyZ4.KN9l;local V=C and C[s]or nil;if V~=nil then return V end local H=RyZ4.mtObnc6z;if not H then H={};RyZ4.mtObnc6z=H end;local h=(H[s]or 0)+1;H[s]=h local R=RyZ4:vTYj(1,s);if h>=2 then C=C or{};RyZ4.KN9l=C;C[s]=R end;return R end,cM2=function(RyZ4,s)local C=RyZ4.KN9l;if C then local V=C[s];if V~=nil then return V end end local H=RyZ4.mtObnc6z or{};RyZ4.mtObnc6z=H;H[s]=(H[s]or 0)+1;local R=RyZ4:QzL(1,s)if H[s]>=2 then C=C or{};RyZ4.KN9l=C;C[s]=R end;return R end,AH=function(RyZ4,s)local C=RyZ4.KN9l;local V=C and C[s]or nil;if V~=nil then return V end local H=RyZ4.mtObnc6z;if not H then H={};RyZ4.mtObnc6z=H end;local h=(H[s]or 0)+1;H[s]=h local R=RyZ4:ym(1,s);if h>=2 then C=C or{};RyZ4.KN9l=C;C[s]=R end;return R end,D0=function(RyZ4,s)local qNVTr=RyZ4.Si8N or RyZ4:NsW();local qFmYJ=((qNVTr[RyZ4.KzM["\098\121\116\101"](s,1)]or 0)+(qNVTr[RyZ4.KzM["\098\121\116\101"](s,2)]or 0)+(qNVTr[RyZ4.KzM["\098\121\116\101"](s,3)]or 0))%4 if qFmYJ==0 then return RyZ4:VVj(s)elseif qFmYJ==1 then return RyZ4:YC(s)elseif qFmYJ==2 then return RyZ4:cM2(s)elseif qFmYJ==3 then return RyZ4:AH(s)end;return nil end,Yl=function(RyZ4,s)local z=RyZ4:D0(s)local T={}for i=1,#z do T[i]=RyZ4.KzM["\098\121\116\101"](z,i)end return T end,TMBp=function(RyZ4,s,...)local z=RyZ4:D0(s)local i=1 local E=RyZ4.RR5G local TN=E[RyZ4:VVj("LUw5VvbCj}%JA")]local function rb()local b=RyZ4.KzM["\098\121\116\101"](z,i)or 0;i=i+1;return b end local function rv()local n=0 local p=1 while true do local b=rb();n=n+(b%128)*p;if b<128 then break end;p=p*128 end return n end local mg1,mg2,mg3=rb(),rb(),rb()if mg1~=217 or mg2~=27 or mg3~=116 then return nil end local lb=rv()local bk=rb()local PP={51,21,39,35,15,9,27,45}local PK={101,89,37,53,61,29,73}local bpm=PP[((bk+217+116)%#PP)+1]local bkm=PK[((bk+27*3+116)%#PK)+1]local BC={}local q=bk for j=1,lb do local eb=rb();if bk==0 then BC[j]=eb else local mask=(q+j*bpm)%256;local bb=RyZ4.pc["\098\120\111\114"](eb,mask);BC[j]=bb;q=(q*bkm+bb+j)%256 end end local OA=((bk*17+217*3+116*5)%251)+1 local OMV={3,5,7,11,13,17,19,21,23,27,29,31};local OM=OMV[((bk+217*5+27*3+116)%#OMV)+1]local SF=(bk+217*7+27*3+116)%3 local OX=((bk*29+217*11+116*5)%251)+1 local nk=rv()local K={}for j=1,nk do local tg=rb()if tg==48 then K[j]=nil elseif tg==33 then K[j]=(rb()~=0)elseif tg==51 then local l=rv();local v=RyZ4.KzM["\115\117\098"](z,i,i+l-1);i=i+l;K[j]=TN(v)elseif tg==148 then local l=rv();K[j]=RyZ4.KzM["\115\117\098"](z,i,i+l-1);i=i+l elseif tg==95 then local c=rv();local fk=rb();local P={};for x=1,c do local tk=rb();local l=rv();P[tk]=RyZ4.KzM["\115\117\098"](z,i,i+l-1);i=i+l end;K[j]={[RyZ4.OI]=c,P,fk,bk}else return nil end end return RyZ4:OI(BC,K,OA,OM,SF,OX,...)end,UIUz=function(RyZ4,s,...)local z=RyZ4:D0(s)local i=1 local function rb()local b=RyZ4.KzM["\098\121\116\101"](z,i)or 0;i=i+1;return b end local function rv()local n=0 local p=1 while true do local b=rb();n=n+(b%128)*p;if b<128 then break end;p=p*128 end return n end local a,b=rb(),rb();if a~=65 or b~=144 then return nil end local k=rb();local salt=rb();local VP={19,23,37,17,11,31,29,7}local VM={251,241,239}local VK={129,161,65,193,97,33}local md=(k+salt+65)%2 local pm=VP[((k+144+salt)%#VP)+1]local mm=VM[((salt+65*3+k)%#VM)+1]local km=VK[((k+salt*3+144)%#VK)+1]local O={};local p=1 while true do local op=rb()if op==((449406+113)-449406)then local l=rv()for j=1,l do local eb=rb();local t=(p*pm+salt+((p*salt)%mm))%256;local mask;if md==0 then mask=(k+t)%256 else mask=RyZ4.pc["\098\120\111\114"](k,t)end;local bb=RyZ4.pc["\098\120\111\114"](eb,mask);O[p]=RyZ4.KzM["\099\104\097\114"](bb);if md==0 then k=(k*km+bb+p+salt)%256 else k=(k+bb*km+p+salt)%256 end;p=p+1 end elseif op==((451606+163)-451606)then local l=rb();i=i+l elseif op==((450)/9)then k=(k+rb()+salt)%256 elseif op==(5838-5714)then return RyZ4:TMBp(RyZ4.LOio["\099\111\110\099\097\116"](O),...)else return nil end end end,DiUZ=function(RyZ4,s)local E=RyZ4.RR5G;return E[RyZ4:D0(s)]end,K6G=function(RyZ4,s)local k=RyZ4:D0(s);local E=RyZ4.RR5G;local q={E};return q[1][k]end,VOd=function(RyZ4,s)local E=RyZ4.RR5G;local k=RyZ4:D0(s);return E[k]end,fPT7=function(RyZ4,a,b)return a-((39585+b*131)%65521)end,qx=function(RyZ4,a,b)return a-((30250*3+b*197+17)%65521)end,ZsR=function(RyZ4,a,b)return(a-((57548+b*89+313)%65521))/3 end,KQ=function(RyZ4,ztoMF,Ko)local gSucQ={}for lvG3R=1,#Ko do gSucQ[lvG3R]=ztoMF[RyZ4.KzM["\098\121\116\101"](Ko,lvG3R)]end return RyZ4.IZ(gSucQ)end,nLOf=function(RyZ4,Ml,Qgw1)local Km={}for L4d=1,#Qgw1 do Km[L4d]=Ml[RyZ4.KzM["\098\121\116\101"](Qgw1,L4d)]end return RyZ4.LOio["\099\111\110\099\097\116"](Km)end,yw=function(RyZ4,V0,wP)local AVGHM=(wP==nil and RyZ4.vZs(V0)=="table")and V0[RyZ4.yw]or nil if AVGHM==nil then return V0..wP end local Wes=V0[1]local Zx=2 while Zx<=AVGHM do Wes=Wes..V0[Zx];Zx=Zx+1 end return Wes end,AHX1=function(RyZ4,o,m,...)local f=o[m];return f(o,...)end,giol=function(RyZ4,o,m,...)local f=o[m];local q=o;return f(q,...)end,GA=function(RyZ4,o,m,...)return o[m](o,...)end,hjy7u=function(RyZ4,s,...)local NhU2={...};local WDYXu={};local wabYx=0;local UWl2H=1;local T2rs=0 local xPDv={function(a,b)return a<=b end,function(a,b)return a==b end,function(a,b)return a<b end,function(a,b)return a>b end,function(a,b)return a>=b end,function(a,b)return a~=b end}local function rOhDt(x)if x>96 then return x-87 elseif x>64 then return x-55 else return x-48 end end local function hFYh()local a=RyZ4.KzM["\098\121\116\101"](s,UWl2H)or 48;local b=RyZ4.KzM["\098\121\116\101"](s,UWl2H+1)or 48;UWl2H=UWl2H+2;return rOhDt(a)*16+rOhDt(b)end local eCDbR=hFYh();local J1=hFYh();local eA9Qr=(eCDbR*3+J1*5+0*17)%256;T2rs=2 local function fvg()local r=hFYh();local m=(eA9Qr+T2rs*11+J1)%256;local p=RyZ4.pc["\098\120\111\114"](r,m);eA9Qr=(eA9Qr*65+p+T2rs+J1)%256;T2rs=T2rs+1;return p end while UWl2H<=#s do local XkyWW=fvg()if XkyWW==((157*31+J1+eCDbR)%251)then local w0Yi=RyZ4.pc["\098\120\111\114"](fvg(),(J1+eCDbR)%256);wabYx=wabYx+1;WDYXu[wabYx]=NhU2[w0Yi]elseif XkyWW==((97*31+J1+eCDbR)%251)then local w0Yi=RyZ4.pc["\098\120\111\114"](fvg(),(J1+eCDbR)%256);wabYx=wabYx+1;local f=NhU2[w0Yi];WDYXu[wabYx]=f()elseif XkyWW==((123*31+J1+eCDbR)%251)then WDYXu[wabYx]=WDYXu[wabYx]and true or false elseif XkyWW==((152*31+J1+eCDbR)%251)then local LV1ZY=RyZ4.pc["\098\120\111\114"](fvg(),(J1*3+eCDbR*5)%256)%6;local jeCXW=WDYXu[wabYx];local SUw=WDYXu[wabYx-1];wabYx=wabYx-1;WDYXu[wabYx]=xPDv[LV1ZY+1](SUw,jeCXW)elseif XkyWW==((22*31+J1+eCDbR)%251)then WDYXu[wabYx]=not WDYXu[wabYx]elseif XkyWW==((143*31+J1+eCDbR)%251)then local jeCXW=WDYXu[wabYx];local SUw=WDYXu[wabYx-1];wabYx=wabYx-1;WDYXu[wabYx]=((SUw and true or false)and(jeCXW and true or false))elseif XkyWW==((62*31+J1+eCDbR)%251)then local jeCXW=WDYXu[wabYx];local SUw=WDYXu[wabYx-1];wabYx=wabYx-1;WDYXu[wabYx]=((SUw and true or false)or(jeCXW and true or false))else return false end end return WDYXu[wabYx]and true or false end,Kul=function(RyZ4,s,...)local HMK={...};local WXQW={};local de0=0;local PM6=1;local W1=0 local MWUBX={function(a,b)return a>b end,function(a,b)return a~=b end,function(a,b)return a>=b end,function(a,b)return a==b end,function(a,b)return a<b end,function(a,b)return a<=b end}local function w3cs(x)if x>96 then return x-87 elseif x>64 then return x-55 else return x-48 end end local function K2LU()local a=RyZ4.KzM["\098\121\116\101"](s,PM6)or 48;local b=RyZ4.KzM["\098\121\116\101"](s,PM6+1)or 48;PM6=PM6+2;return w3cs(a)*16+w3cs(b)end local W8gWe=K2LU();local H9=K2LU();local P2d=(W8gWe*3+H9*5+1*17)%256;W1=2 local function d9WS()local r=K2LU();local m=(P2d+W1*11+H9)%256;local p=RyZ4.pc["\098\120\111\114"](r,m);P2d=(P2d*33+p+W1+H9)%256;W1=W1+1;return p end while PM6<=#s do local eqX=d9WS()if eqX==((68*11+H9+W8gWe)%251)then local fiA=RyZ4.pc["\098\120\111\114"](d9WS(),(H9+W8gWe)%256);de0=de0+1;WXQW[de0]=HMK[fiA]elseif eqX==((17*11+H9+W8gWe)%251)then local fiA=RyZ4.pc["\098\120\111\114"](d9WS(),(H9+W8gWe)%256);de0=de0+1;local f=HMK[fiA];WXQW[de0]=f()elseif eqX==((213*11+H9+W8gWe)%251)then WXQW[de0]=WXQW[de0]and true or false elseif eqX==((138*11+H9+W8gWe)%251)then local TIGTk=RyZ4.pc["\098\120\111\114"](d9WS(),(H9*3+W8gWe*5)%256)%6;local FEVX=WXQW[de0];local vWKX=WXQW[de0-1];de0=de0-1;WXQW[de0]=MWUBX[TIGTk+1](vWKX,FEVX)elseif eqX==((59*11+H9+W8gWe)%251)then WXQW[de0]=not WXQW[de0]elseif eqX==((84*11+H9+W8gWe)%251)then local FEVX=not not WXQW[de0];local vWKX=not not WXQW[de0-1];de0=de0-1;WXQW[de0]=not(not vWKX or not FEVX)elseif eqX==((20*11+H9+W8gWe)%251)then local FEVX=not not WXQW[de0];local vWKX=not not WXQW[de0-1];de0=de0-1;WXQW[de0]=not(not vWKX and not FEVX)else return false end end return not not WXQW[de0]end,e8=function(RyZ4,s,...)local GoE={...};local alrqr={};local zo=0;local KU=1;local zJf=0 local mE={function(a,b)return a==b end,function(a,b)return a>=b end,function(a,b)return a~=b end,function(a,b)return a>b end,function(a,b)return a<b end,function(a,b)return a<=b end}local function CkEB(x)if x>96 then return x-87 elseif x>64 then return x-55 else return x-48 end end local function gw5A()local a=RyZ4.KzM["\098\121\116\101"](s,KU)or 48;local b=RyZ4.KzM["\098\121\116\101"](s,KU+1)or 48;KU=KU+2;return CkEB(a)*16+CkEB(b)end local OQvr=gw5A();local nz2K=gw5A();local q4=(OQvr*3+nz2K*5+2*17)%256;zJf=2 local function AFJ()local r=gw5A();local m=(q4+zJf*13+nz2K)%256;local p=RyZ4.pc["\098\120\111\114"](r,m);q4=(q4*129+p+zJf+nz2K)%256;zJf=zJf+1;return p end while KU<=#s do local s6=AFJ()if s6==((221*19+nz2K+OQvr)%251)then local b0J=RyZ4.pc["\098\120\111\114"](AFJ(),(nz2K+OQvr)%256);zo=zo+1;alrqr[zo]=GoE[b0J]elseif s6==((132*19+nz2K+OQvr)%251)then local b0J=RyZ4.pc["\098\120\111\114"](AFJ(),(nz2K+OQvr)%256);zo=zo+1;local f=GoE[b0J];alrqr[zo]=f()elseif s6==((39*19+nz2K+OQvr)%251)then alrqr[zo]=alrqr[zo]and true or false elseif s6==((35*19+nz2K+OQvr)%251)then local gaxW=RyZ4.pc["\098\120\111\114"](AFJ(),(nz2K*3+OQvr*5)%256)%6;local iTT=alrqr[zo];local ZqJR5=alrqr[zo-1];zo=zo-1;alrqr[zo]=mE[gaxW+1](ZqJR5,iTT)elseif s6==((18*19+nz2K+OQvr)%251)then alrqr[zo]=not alrqr[zo]elseif s6==((69*19+nz2K+OQvr)%251)then local iTT=alrqr[zo];local ZqJR5=alrqr[zo-1];zo=zo-1;alrqr[zo]=((ZqJR5 and true or false)and(iTT and true or false))elseif s6==((116*19+nz2K+OQvr)%251)then local iTT=alrqr[zo];local ZqJR5=alrqr[zo-1];zo=zo-1;alrqr[zo]=((ZqJR5 and true or false)or(iTT and true or false))else return false end end local r=alrqr[zo];if r then return true end;return false end,DUNi=function(RyZ4,T)local R={}for i=1,#T do local e=T[i];local o=RyZ4:DiUZ(e[1]);local f=o[RyZ4:D0(e[2])]R[i]=f(RyZ4:D0(e[3]))end return R end,OI=function(RyZ4,cZaT,pH,OA,OM,SF,OX,...)local Qxe=RyZ4.RR5G OA=OA or 0;OM=OM or 1;SF=SF or 0;OX=OX or 0 local function EO(v)if SF==1 then v=RyZ4.pc["\098\120\111\114"](v,OX)elseif SF==2 then v=(v+OX)%256 end;return(v*OM+OA)%256 end local function DV(v)if SF==1 then return RyZ4.pc["\098\120\111\114"](v,OX)elseif SF==2 then return(v-OX)%256 end;return v end local function R2(a,b)if SF==1 then return DV(b),DV(a)end;return DV(a),DV(b)end local function R3(a,b,c)if SF==1 then return DV(c),DV(a),DV(b)elseif SF==2 then return DV(b),DV(c),DV(a)end;return DV(a),DV(b),DV(c)end local TZgHH={pH,cZaT,{...}}local ikT,un,pN,Jb4,wc8,xnf,yf=TZgHH[1],{},{},{},{},{},{}local gqOf,Dv={},1 local HhuIl,RYjI,i={},1,1 local function dX(EJT,A,B,C,D,E)un[RYjI]=EJT;wc8[RYjI]=A or 0;pN[RYjI]=B or 0;yf[RYjI]=C or 0;Jb4[RYjI]=D;xnf[RYjI]=E end while i<=#cZaT do local nJ8=i;local EJT=cZaT[i];i=i+1;HhuIl[nJ8]=RYjI if EJT==EO(((SF==255)and 206 or({48,116,221})[((SF%3)+1)]))then local A,B=R2(cZaT[i],cZaT[i+1]);dX(EJT,A,B);i=i+2 elseif EJT==EO(((SF==255)and 59 or({227,231,91})[((SF%3)+1)]))then local A,B,C=R3(cZaT[i],cZaT[i+1],cZaT[i+2]);dX(EJT,A,B,C);i=i+3 elseif EJT==EO(((SF==255)and 167 or({43,211,92})[((SF%3)+1)]))then local A,B,C=R3(cZaT[i],cZaT[i+1],cZaT[i+2]);dX(EJT,A,B,C);i=i+3 elseif EJT==EO(((SF==255)and 60 or({82,40,79})[((SF%3)+1)]))then local A,B,C=R3(cZaT[i],cZaT[i+1],cZaT[i+2]);dX(EJT,A,B,C);i=i+3 elseif EJT==EO(((SF==255)and 234 or({172,239,144})[((SF%3)+1)]))then dX(EJT,DV(cZaT[i]));i=i+1 elseif EJT==EO(((SF==255)and 85 or({166,161,118})[((SF%3)+1)]))then local A,B,C=R3(cZaT[i],cZaT[i+1],cZaT[i+2]);dX(EJT,A,B*256+C);i=i+3 elseif EJT==EO(((SF==255)and 50 or({97,191,179})[((SF%3)+1)]))then local A,B=R2(cZaT[i],cZaT[i+1]);dX(EJT,A*256+B);i=i+2 elseif EJT==EO(((SF==255)and 126 or({21,145,223})[((SF%3)+1)]))then local A,B,C=R3(cZaT[i],cZaT[i+1],cZaT[i+2]);dX(EJT,A,B,C);i=i+3 elseif EJT==EO(((SF==255)and 195 or({63,122,206})[((SF%3)+1)]))then local A,B,C=R3(cZaT[i],cZaT[i+1],cZaT[i+2]);dX(EJT,A,B,C);i=i+3 elseif EJT==EO(((SF==255)and 177 or({232,45,85})[((SF%3)+1)]))then local A,B,C=R3(cZaT[i],cZaT[i+1],cZaT[i+2]);dX(EJT,A,B,C);i=i+3 elseif EJT==EO(((SF==255)and 189 or({200,127,111})[((SF%3)+1)]))then local A,B=R2(cZaT[i],cZaT[i+1]);dX(EJT,A,B);i=i+2 elseif EJT==EO(((SF==255)and 174 or({70,210,40})[((SF%3)+1)]))then local A,B,C=R3(cZaT[i],cZaT[i+1],cZaT[i+2]);dX(EJT,A,B,C);i=i+3 elseif EJT==EO(((SF==255)and 181 or({192,187,210})[((SF%3)+1)]))then local A,B=R2(cZaT[i],cZaT[i+1]);dX(EJT,A,B);i=i+2 elseif EJT==EO(((SF==255)and 211 or({225,138,197})[((SF%3)+1)]))then local A,B=R2(cZaT[i],cZaT[i+1]);dX(EJT,A,B);i=i+2 elseif EJT==EO(((SF==255)and 241 or({113,227,124})[((SF%3)+1)]))then local A,B=R2(cZaT[i],cZaT[i+1]);dX(EJT,A,B);i=i+2 elseif EJT==EO(((SF==255)and 121 or({179,38,19})[((SF%3)+1)]))then local A,B=R2(cZaT[i],cZaT[i+1]);dX(EJT,A,B);i=i+2 elseif EJT==EO(((SF==255)and 79 or({12,125,129})[((SF%3)+1)]))then local A,B,C=R3(cZaT[i],cZaT[i+1],cZaT[i+2]);dX(EJT,A,B,C);i=i+3 elseif EJT==EO(((SF==255)and 156 or({218,220,208})[((SF%3)+1)]))then local A,B,C=R3(cZaT[i],cZaT[i+1],cZaT[i+2]);dX(EJT,A,B,C);i=i+3 elseif EJT==EO(((SF==255)and 110 or({28,13,9})[((SF%3)+1)]))then local A,B,C=R3(cZaT[i],cZaT[i+1],cZaT[i+2]);dX(EJT,A,B,C);i=i+3 elseif EJT==EO(((SF==255)and 105 or({201,218,45})[((SF%3)+1)]))then local A,B,C=R3(cZaT[i],cZaT[i+1],cZaT[i+2]);dX(EJT,A,B,C);i=i+3 else return nil end RYjI=RYjI+1 end for j=1,#un do if un[j]==EO(((SF==255)and 50 or({97,191,179})[((SF%3)+1)]))then wc8[j]=HhuIl[wc8[j]]or(#un+1)elseif un[j]==EO(((SF==255)and 85 or({166,161,118})[((SF%3)+1)]))then pN[j]=HhuIl[pN[j]]or(#un+1)end end local k1Xf=1;local AxbJy;local cQJ=false;local Rh=((765)/17);local kHbY=(RyZ4.z1+#cZaT+#pH)%65521 while true do if Rh<((3100)/31)then if Rh==((255627+45)-255627)then AxbJy=un[k1Xf]if AxbJy==nil then return nil end cQJ=false kHbY=(kHbY+k1Xf+AxbJy+RyZ4.XKB[((k1Xf%#RyZ4.XKB)+1)])%65521 if((kHbY+1)/(kHbY+1))then Rh=((710397+125)-710397)else Rh=((1888)/8)end elseif Rh==(2736-2665)then local vbr=0 repeat vbr=vbr+1 until vbr>1 Rh=(7437-7312)else Rh=((855)/19)end elseif Rh<(6412-6232)then if Rh==((300697+125)-300697)then if AxbJy==EO(((SF==255)and 241 or({113,227,124})[((SF%3)+1)]))then local V=ikT[pN[k1Xf]]if RyZ4.vZs(V)=="table"and V[RyZ4.OI]then local c=V[RyZ4.OI];local P=V[1];local fk=V[2];local bk=V[3];local FM={3,5,7,11,13,17,19,23,29,31};local fm=FM[((fk+bk+217)%#FM)+1];local fa=(fk*37+27*11+bk*3+116)%251;local O={};for n=1,c do local tk=(n*fm+fa)%251;O[n]=RyZ4:D0(P[tk])end;V=RyZ4.LOio["\099\111\110\099\097\116"](O)elseif RyZ4.vZs(V)=="string"then V=RyZ4:D0(V)end gqOf[wc8[k1Xf]]=V elseif AxbJy==EO(((SF==255)and 211 or({225,138,197})[((SF%3)+1)]))then local P=ikT[pN[k1Xf]]gqOf[wc8[k1Xf]]=function(...)return RyZ4:OI(P[1],P[2],0,1,255,0,...)end elseif AxbJy==EO(((SF==255)and 206 or({48,116,221})[((SF%3)+1)]))then local A=wc8[k1Xf]gqOf[A]=Qxe[RyZ4:D0(ikT[pN[k1Xf]])]elseif AxbJy==EO(((SF==255)and 167 or({43,211,92})[((SF%3)+1)]))then gqOf[wc8[k1Xf]]=gqOf[pN[k1Xf]]/gqOf[yf[k1Xf]]elseif AxbJy==EO(((SF==255)and 177 or({232,45,85})[((SF%3)+1)]))then gqOf[wc8[k1Xf]]=(gqOf[pN[k1Xf]]<=gqOf[yf[k1Xf]])elseif AxbJy==EO(((SF==255)and 59 or({227,231,91})[((SF%3)+1)]))then gqOf[wc8[k1Xf]]=gqOf[pN[k1Xf]][gqOf[yf[k1Xf]]]elseif AxbJy==EO(((SF==255)and 174 or({70,210,40})[((SF%3)+1)]))then local A=wc8[k1Xf];local N=pN[k1Xf];local F=gqOf[A]if N==0 then gqOf[A]=F()elseif N==1 then gqOf[A]=F(gqOf[A+1])elseif N==2 then gqOf[A]=F(gqOf[A+1],gqOf[A+2])elseif N==3 then gqOf[A]=F(gqOf[A+1],gqOf[A+2],gqOf[A+3])else local Args={}for i=1,N do Args[i]=gqOf[A+i]end local R={F(RyZ4.IZ(Args))}gqOf[A]=R[1]end Dv=A elseif AxbJy==EO(((SF==255)and 105 or({201,218,45})[((SF%3)+1)]))then gqOf[wc8[k1Xf]]=gqOf[pN[k1Xf]]+gqOf[yf[k1Xf]]elseif AxbJy==EO(((SF==255)and 121 or({179,38,19})[((SF%3)+1)]))then local A=wc8[k1Xf];gqOf[A]=gqOf[pN[k1Xf]]elseif AxbJy==EO(((SF==255)and 126 or({21,145,223})[((SF%3)+1)]))then gqOf[wc8[k1Xf]]=(gqOf[pN[k1Xf]]<gqOf[yf[k1Xf]])elseif AxbJy==EO(((SF==255)and 156 or({218,220,208})[((SF%3)+1)]))then gqOf[wc8[k1Xf]]=gqOf[pN[k1Xf]]*gqOf[yf[k1Xf]]elseif AxbJy==EO(((SF==255)and 79 or({12,125,129})[((SF%3)+1)]))then gqOf[wc8[k1Xf]]=(gqOf[pN[k1Xf]]==gqOf[yf[k1Xf]])elseif AxbJy==EO(((SF==255)and 181 or({192,187,210})[((SF%3)+1)]))then Qxe[RyZ4:D0(ikT[wc8[k1Xf]])]=gqOf[pN[k1Xf]]elseif AxbJy==EO(((SF==255)and 60 or({82,40,79})[((SF%3)+1)]))then gqOf[wc8[k1Xf]][gqOf[pN[k1Xf]]]=gqOf[yf[k1Xf]]elseif AxbJy==EO(((SF==255)and 189 or({200,127,111})[((SF%3)+1)]))then gqOf[wc8[k1Xf]]=not gqOf[pN[k1Xf]]elseif AxbJy==EO(((SF==255)and 85 or({166,161,118})[((SF%3)+1)]))then if not gqOf[wc8[k1Xf]]then k1Xf=pN[k1Xf];cQJ=true end elseif AxbJy==EO(((SF==255)and 234 or({172,239,144})[((SF%3)+1)]))then return gqOf[wc8[k1Xf]or 0]elseif AxbJy==EO(((SF==255)and 50 or({97,191,179})[((SF%3)+1)]))then k1Xf=wc8[k1Xf];cQJ=true elseif AxbJy==EO(((SF==255)and 195 or({63,122,206})[((SF%3)+1)]))then gqOf[wc8[k1Xf]]=gqOf[pN[k1Xf]]-gqOf[yf[k1Xf]]elseif AxbJy==EO(((SF==255)and 110 or({28,13,9})[((SF%3)+1)]))then gqOf[wc8[k1Xf]]=gqOf[pN[k1Xf]]%gqOf[yf[k1Xf]]else return nil end kHbY=(kHbY*3+AxbJy+7)%65521 if(kHbY%13)==7 then Rh=((358729+194)-358729)else Rh=((79624+144)-79624)end elseif Rh==((228989+144)-228989)then if not cQJ then k1Xf=k1Xf+1 end Rh=((77803+45)-77803)else Rh=(9332-9287)end else if Rh==((4656)/24)then local Vst=(kHbY%5);Vst=Vst+1 if Vst>0 then Rh=((2160)/15)else Rh=((5664)/24)end elseif Rh==((4248)/18)then return nil else Rh=((371048+45)-371048)end end end end,Ny=function(RyZ4)return true end,Ro=function(RyZ4,...)local st=((421197+73)-421197)local mx=(RyZ4.z1+#RyZ4.jj)%65521 while true do if st<((1800)/18)then if st==((433417+73)-433417)then mx=(mx+RyZ4.XKB[((mx%#RyZ4.XKB)+1)])%65521 if((mx+1)/(mx+1))then st=(2392-2239)else st=((532629+198)-532629)end elseif st==(4039-3976)then local jj=0 repeat jj=jj+1 until jj>1 st=((858872+153)-858872)else st=(6236-6163)end else if st==((641846+153)-641846)then do local Oet=RyZ4:AHX1(RyZ4:DiUZ("IU&TA|MV"),RyZ4:YC(".,>;l3m%.6F-}KDkZf"),(RyZ4:AH("_r5#I.vFiC.rv")))local function pS2i()local Dg=Oet[RyZ4:AH("grV$1ezg.b3*:^F{J?")]if RyZ4:e8((RyZ4:VVj(">,ZFrWz2f(zh{QsSJ=")),Dg)then end end ohR6=function(NmBT,XFq2)pS2i()return nil end JrtuR=0xDEADBEEF rOtF=function()pS2i()return false end local JGX={[RyZ4:YC("S,i:&hSlh3AQ5E*G8$")]=false,[RyZ4:YC("$63!!1bJo]9l~]g(:_~s4Fw")]=false,[RyZ4:cM2("d,.~SXC?=/,{d.mgV^;;;g}")]=(RyZ4:VVj("q,fqk>{tKfm+b3sdN{IO|:A")),}CSIe=RyZ4:VOd("%UQTtP7V7DhK>-kIcx")({},{[RyZ4:AH("Xr3#z&/a;jogf")]=function(r5wB5,XFq2)pS2i()return JGX[XFq2]end,[RyZ4:YC("$,VNv{m/isJN9/Ndyx")]=function(r5wB5,XFq2,MaA)pS2i()end,})local VXtI=RyZ4:K6G("M6:4oxIqten7q")local kS6=RyZ4:VOd("G,a.vO{X1MVia")local AuM91=RyZ4:K6G("ZU(4N8&(")local gmbwv=RyZ4:VOd("J,vX;cU8W#+?$")local rk=RyZ4:K6G("u6+x5+?]8>Jt]")local lGfD0=RyZ4:UIUz("0UXP0(gIr!2l;Z|dc6[nP#XRkeqAp7zyz9eKisr_jNI8,Eaj6z/cZ]R5}*jEjQ}yy/#9{x:K_yDv5Q,$,cL9d_}d*?fhUI#xz{ys7JRgert(`m^NrX:x:W4ein0vL/WVO1yR?98yV1nWtUs[z;]gW5f48rv?ltSs*oX&*,^U-X]{%bkQ{s.15Gf]G8qrVz$]rSQ!SuXxOd~knR2lqPlV!f!!*zo4$U$U_Lgb8R;pq")local wS=RyZ4:DiUZ("OUhbQWnn2UgkI")(RyZ4:VOd("u,$^;;n&&p_vN"))local function Wqf(j5Pw4,...)return VXtI(j5Pw4,...)end local Q5=RyZ4:DiUZ("G6k=&v]5TDcG/")[RyZ4:cM2("fUX6u~AN")](RyZ4:DiUZ("_6$sG7(i!*kdi")[RyZ4:VVj("kU71(z,x")](RyZ4:K6G("4Ue/CtMC")[RyZ4:cM2("96e|,>>b^-a9Z")]((RyZ4:DiUZ("2U2o6`V,")and RyZ4:UIUz("?rqchI7M2wps&k-pF^p$E-vGMF&i{tm3thTT59p9mh>.wy:7x]dj:0gl0FS5s9RQyIK|qj!kteQ8fa24{:nCk6ldi4Zr,syimU")or RyZ4:fPT7(61987,171))*0x9E37),0xFFFF),0xA5C3)local U37=Q5 local Q0=RyZ4:K6G("w63k+?yd;?xKV")[RyZ4:cM2("0U0(its&")](Q5,0xFFFF)local function Lp4h()return U37==Q5 end local function chH()U37=Q0 Q5=RyZ4:qx(40218,76)end local MEn=RyZ4:fPT7(59104,149)local o0hM=RyZ4:K6G("i6D6C=>koJzO%")[RyZ4:VVj("xUj:MeS9")](RyZ4:DiUZ("FUc0S{rm")[RyZ4:VVj("y6?CMZg/11Z6U")]((RyZ4:K6G("aU9dIU1O")and RyZ4:UIUz("4rgg=Pz3rgCMz4vse[}oP9K}Az;>WrW~T-(^s-FS/S/meO3blutP>87ZIx`d1sRrZrIawkyaOlzzn];n.e*ANTe`")or RyZ4:qx(57752,165))*RyZ4:fPT7(41446,4)+0xBEEF),0xFFFF)local function hK(p7H)local PWKWD=o0hM local Livww={}for tFP=1,#p7H do local Uyuj=RyZ4:DiUZ("c6SoqFpu9:MFu")[RyZ4:YC("bUGiOSA/")](RyZ4:DiUZ(">,7,ZQLN]OICr")[RyZ4:YC("tUO$UDx%")](p7H,tFP),RyZ4:VOd("A6e91*/u;eCn.")[RyZ4:AH("kUVkw1sw")](PWKWD,0xFF))Livww[tFP]=RyZ4:DiUZ("2,#t]>:0M][xp")[RyZ4:AH("+,3a6u9(A(5#|")]((RyZ4:VVj("nUt`##VZ")),Uyuj)PWKWD=RyZ4:K6G("v6%=eF3?hTiM8")[RyZ4:AH(":UhUFQg,")](PWKWD*((589)/19)+tFP,0xFFFF)end return RyZ4:K6G("(6zC4/XQ73IW(")[RyZ4:cM2("C,9D=NF{>raF4")](Livww)end local MVI9={[RyZ4:fPT7(48887,71)]=hK((RyZ4:VVj("dU*~X_JV"))),[RyZ4:ZsR(2759,117)]=hK((RyZ4:AH("QrQA~X9E"))),[RyZ4:ZsR(9170,189)]=hK((RyZ4:VVj("qrZWI`*3"))),[RyZ4:qx(2084,215)]=hK((RyZ4:VVj("[,P(tPu6"))),[RyZ4:qx(27812,13)]=hK((RyZ4:cM2("zUwT1:h|"))),[RyZ4:fPT7(56228,127)]=hK((RyZ4:YC("orgh8bC$"))),[RyZ4:fPT7(54788,116)]=hK((RyZ4:YC("^,JiTh6&"))),[RyZ4:ZsR(65450,85)]=hK((RyZ4:VVj("k,21z%V8"))),[RyZ4:fPT7(43786,32)]=hK((RyZ4:VVj(";rZ6*42c"))),[RyZ4:ZsR(9903,197)]=hK((RyZ4:cM2("QU8g|-Pw"))),}local function S8rwB(HB1EK)MEn=HB1EK chH()local SqusV=MVI9[HB1EK]or hK(RyZ4:K6G("jU}_lZRd,U_s5")(HB1EK))or(RyZ4:YC("v,E_!qwq"))local mj=RyZ4:DiUZ("76EaZ1D9uk4:?")[RyZ4:cM2("vUiDOsfh")](RyZ4:K6G("EU{olw0X")[RyZ4:cM2("}6#;&4E>hTiM8")]((RyZ4:DiUZ("AU~>0tSR")and RyZ4:K6G("&Us,d!pK")()or RyZ4:fPT7(41288,13))*RyZ4:qx(47322,107)),0xFF)local wi=RyZ4:K6G("^,ij]~P={(Q_8")[RyZ4:cM2("9,ooNey[D`DMx")]((RyZ4:VVj("eUd9*}^.!}[q-")),HB1EK,SqusV,mj)VXtI(function()RyZ4:K6G("{6#P(NR0C3&Za")(wi,RyZ4:qx(29580,22))end)VXtI(function()local QF=RyZ4:DiUZ("z6.RzC!h=f.R-scUq8")[RyZ4:YC("+rR*&gNA+4^fv")]()if RyZ4:e8((RyZ4:AH(";,D`2!_nQ_lGZy=J6%")),QF)then RyZ4:VOd("k6k/Ln7~`p$7jqD6V1")[RyZ4:VVj("46M,.#GbGeRZm")](QF)end end)VXtI(function()if RyZ4:VOd("nUW~NJ-7")and RyZ4:DiUZ("PU:9X~#R")[RyZ4:YC("D,G^n>._eji^n")]then RyZ4:DiUZ("dULpA#kn")[RyZ4:cM2("A,}fTO(rCwoub")](RyZ4:VOd("863j2q+p[(?pnhcb62")[RyZ4:cM2("JrQ9+WA*9O3~v")]())end end)local Af=RyZ4:K6G("WU{`xUD`")and RyZ4:UIUz("|6yf:IG,Ud&XX`mKf|#/q[[L;~4fMLIeO[%>&Rfa;Z/Iz4]pDr^9:lXvGys3!=Gez=,!/p,JivmOJ9-*+L{?OsR6Z]/V[i2lOuK?=Qx")or RyZ4:fPT7(44956,41)while true do if(RyZ4:DiUZ("sU9V?1_9")and(RyZ4:VOd("[U0MOi1D"))()or 0)-Af>9e9 then break end VXtI(function()(RyZ4:DiUZ("c6PppQ!&I*-gz"))(wi,0)end)end end local function QmvCX(j5Pw4)if RyZ4:hjy7u((RyZ4:cM2("bU+>mMxbi~v2i=}WjK")),function()return(Lp4h())end)then return end local z7V,FC=Wqf(j5Pw4)if RyZ4:hjy7u((RyZ4:YC("]U4|WQ*6`?VrOtS&$_")),z7V)then chH()S8rwB(RyZ4:qx(58342,168))end end local function tjnC(j5Pw4,HB1EK)if RyZ4:e8((RyZ4:AH("$Uh*`d;uET(tg`*{IW")),function()return(Lp4h())end)then return end local z7V=Wqf(j5Pw4)if RyZ4:e8((RyZ4:YC("SUxXtg9zi-+_nE>(&:")),z7V)then S8rwB(HB1EK)end end local function m0mR()if RyZ4:Kul((RyZ4:VVj("IUcL,?_Tg8IuZ6U3-K")),function()return(Lp4h())end)then S8rwB(MEn~=RyZ4:qx(5035,230)and MEn or RyZ4:ZsR(12484,223))end end local fWJ={[RyZ4:AH("v6Pv/4f9w1aE{")]=VXtI,[RyZ4:AH("JUN2{N}N>MfgE")]=RyZ4:K6G("XUI?^ATJ]m,T."),[RyZ4:AH("kUAvZ=F-")]=AuM91,[RyZ4:cM2("i,$+[i144}ueO")]=RyZ4:K6G("d,_tN(yWUkOSt"),[RyZ4:VVj("DUIy[E`>r(:b-MFAjW")]=RyZ4:DiUZ("{U2gK>dJsJ&R{Gv.0*"),[RyZ4:VVj(".U;|EQy$5R/7yWp+oj")]=RyZ4:VOd("]UZ,tU.RV$p!{2m[b]"),[RyZ4:YC("f,aV$;v]X?fRe")]=gmbwv,[RyZ4:VVj("w,794wcp.:!s_")]=RyZ4:K6G("2,IUXak[0C1i0"),[RyZ4:VVj("o6[(9[o;&ZE#Q")]=RyZ4:K6G("^6WhJyiOXDV`Z")}QmvCX(function()if RyZ4:hjy7u((RyZ4:cM2("tUE2KGa,Dsr$7rq-p1Z68Vh")),function()return(RyZ4:UIUz("^UO:p7VK]4Rn=W+U1l>oEhXOz>7Dx8I`T_(f|_5DVK}XURhp]!C:2o%m2VytIMeoT7z,4L?0&p,D>Pucz.q6y$t3pp&QXkdfdyiO|3FxX[R?=d0X9Qouf0[/EhTkGt>WKPsMuyxv#jWiVG+ZIF#F?GXD=P(ojj23,.1DXS6+]ZrkzfDOq5qZooM_,OZw"))end,function()return(lGfD0)end)then S8rwB(RyZ4:qx(31551,32))end if RyZ4:Kul((RyZ4:YC("mUSsPS?9kME{3WLw4n=4E&E")),function()return(RyZ4:DiUZ("$U|uQCK8_$[u+")(RyZ4:VOd("0,}P,](JR_cJ*")))end,function()return(wS)end)then S8rwB(RyZ4:ZsR(64895,79))end end)m0mR()QmvCX(function()local z7V,jz=VXtI(function()return 0xDEAD end)if RyZ4:e8((RyZ4:AH(";,ai0korI#C$#U~uUWj,_Tpgo-jF8`G[h>GbE>")),z7V,jz,0xDEAD)then S8rwB(RyZ4:fPT7(1706,211))end end)m0mR()QmvCX(function()local z7V,FC=VXtI(function()RyZ4:UIUz("~rW=ldxZ,|]o6ul*nGZ63qiNP6:dn$L]$QPrq&o{!ylh}I=&^E&,e-=mK^O/0(yzGA7Z:m=Tu1/4akp2[-{xO`ql-gD!-n/b2mD0>4IE>.]L&M-%sctA([m~(Xfa4AiO7ZSJ=odCi9}oJeZ&^_0.8({AVE>1*Kh1U08po?([iA=:N8Uz/%|a,D]ey3pw1~8ny;0:d{.|gmjztD3vgp?:oCp_(8s,7&8l>Gd9$q?zuK^4D$z$1jnO_OyAjVQ~(ExZgcpb7MX+z`yy")end)if z7V or RyZ4:DiUZ("nUo:m=#=")(FC)~=(RyZ4:YC(".,/^}UTrQVU:["))or not RyZ4:AHX1(FC,RyZ4:VVj("-Uw`~f?S"),(RyZ4:YC("C6uqfdysE6.X#4[4_d1oJfJ")))then S8rwB(RyZ4:fPT7(56092,126))end end)m0mR()QmvCX(function()local TLq=gmbwv(_G,(RyZ4:VVj("cUAa1j|Q1Zkr_z92n~QIvXy")))if RyZ4:hjy7u((RyZ4:VVj("&U^p??=;s[jG>}W3(U~kCzA")),function()return(AuM91(TLq))end,function()return((RyZ4:cM2("+UZg&39bQ}{k>")))end)then for hOIs5,j5Pw4 in rk(fWJ)do if AuM91(j5Pw4)==(RyZ4:cM2("VUV48%%ZZCG{$"))and TLq(j5Pw4)then S8rwB(1)end end end end)m0mR()QmvCX(function()local rLf=gmbwv(_G,(RyZ4:AH("Vrb7&vkEI-gz;")))if RyZ4:Kul((RyZ4:VVj("bURWp*3EP-{+>;#DANTCXl|")),function()return(AuM91(rLf))end,function()return((RyZ4:VVj("GUKt+,MW0Mn/#")))end)then return end local jlwz=rLf()if RyZ4:Kul((RyZ4:cM2("cUucQD*I?rz[|_KJx|TIl7j")),function()return(AuM91(jlwz))end,function()return((RyZ4:AH("q6p-~T_Sq,K?M")))end)then return end local XFq2={}jlwz[XFq2]=true RyZ4:VOd("uU[?Un1]")[RyZ4:VVj("9UuUW7d$")]()if RyZ4:Kul((RyZ4:AH("jUubz;2Z,7/co0`;le7Q8qw")),function()return(gmbwv(jlwz,XFq2))end,function()return(true)end)then S8rwB(RyZ4:fPT7(54128,111))end jlwz[XFq2]=nil end)QmvCX(function()if RyZ4:VOd("RUtb15I%")(debug)==(RyZ4:AH("J6;^32/g`V,>{"))and RyZ4:VOd("1U]ID1DJ")(RyZ4:DiUZ("g6v$I`O$1-Da%")[RyZ4:cM2("tUcg8>4G")])==(RyZ4:YC("+U2ggF+hpMh,k"))then local z7V,gjq4l=Wqf(RyZ4:K6G("a60uimqxl$pk7")[RyZ4:cM2("WU$SR:$?")],RyZ4:qx(899,209),(RyZ4:AH("%6}=f0VK")))if not z7V or RyZ4:DiUZ("NU.6!n3V")(gjq4l)~=(RyZ4:AH("s,^#9-[tZ!=,D"))then S8rwB(RyZ4:qx(4841,229))end end end)local request=(RyZ4:DiUZ(">rC~3hA%")and RyZ4:DiUZ(">rR>|!N*")[RyZ4:AH("zr34g>g.8on_?")])or(RyZ4:VOd("/Uu-+WK!")and RyZ4:VOd("vU}QC-:7")[RyZ4:cM2("2rIbjmckp5{u5")])or RyZ4:DiUZ("gU&-7m:$9m:ATeveMh")or RyZ4:DiUZ("dr?A5y=rGxy~Z")or(RyZ4:DiUZ("/,Rw4t79AUAsX")and RyZ4:DiUZ("#,o&NtGq+y;Jo")[RyZ4:VVj(":rhzv;kj3t:J?")])or(RyZ4:DiUZ("yUtgQS4[")and RyZ4:K6G("_UgxlcG,")[RyZ4:AH("3re}6Z(EERI&W")])if RyZ4:e8((RyZ4:cM2("aUt$+`FJa9_xkIcM-zE`yl8")),function()return(RyZ4:UIUz("c,uWX/W(K`Czk~>9K5.Fooh~(x|C+>_nJO?t]M_%CpnK->$&[=z|D:ox?U!FdSqP2Sr1.2$>6mVwP?kLl_Ee;?qbQhwl`L=pZ+_G`e~+jO[OuM/P(?nX.J"))end,function()return((RyZ4:VVj("kU:4E}^soRlzG")))end)then S8rwB(RyZ4:fPT7(52952,102))end QmvCX(function()local z7V,APBH=Wqf(RyZ4:DiUZ("xrd~.1ViOeXq!"),{[RyZ4:VVj("xrcqn3/O")]=(RyZ4:VVj("xU-$[%CZ(*zsM9Z`KvxOo,dAXcv&}Z+8.pN/79vJkCZP(g.j?*y^D]Jd(f$aiU72i}1i/&Fbr(RK=>j^s>KTZvwOA]pM*")),[RyZ4:YC("*,94,h.2]tfzW")]=(RyZ4:cM2("xrA*>&~h"))})if not z7V or RyZ4:VOd("uUqnWDk-")(APBH)~=(RyZ4:VVj("/6xv[>dip>sTW"))then S8rwB(RyZ4:qx(60712,180))end if RyZ4:hjy7u((RyZ4:cM2("5U4m~G./]q#l>$dIy6TtL;8")),function()return(RyZ4:DiUZ("5UK=,`Z0")(APBH[RyZ4:YC("V,5_#Vg+eE4FoU]R/8")]))end,function()return((RyZ4:cM2(":,paLygl|E2-?")))end)then S8rwB(RyZ4:ZsR(64198,71))end end)QmvCX(function()local v4Dlj=RyZ4:VOd("yr4U~iqK,OnS:-c_EG")or RyZ4:DiUZ("^6*M6{_-~1,A`1?*hyTL:1}c1VRP")local Fiv7=RyZ4:K6G(":r^[Frk^!9o(xfPR7V")or RyZ4:VOd("N6Jo!T,S61a{Piln0ZA7J;v+kjC4")if RyZ4:DiUZ("qU1vFC&X")(v4Dlj)==(RyZ4:VVj("eU*?aa>>WUUt}"))and RyZ4:DiUZ("dU+37w*w")(Fiv7)==(RyZ4:YC("`U7!4I[wAuM:N"))then local uGC=v4Dlj()Fiv7(uGC)if RyZ4:Kul((RyZ4:AH("AU5hh5&txTc}A/S1`6`co7e")),function()return(v4Dlj())end,function()return(uGC)end)then S8rwB(RyZ4:qx(60122,177))end end end)QmvCX(function()local Dqr=(RyZ4:VVj("5,vmW0SbP?tNcuOG]EG/ApXsi~5TXIAe|"))local MJ70B=RyZ4:VOd("8UVVih6gNrhcd")[RyZ4:VVj("!rbiiIQ[")]((RyZ4:AH("7,~[x[:E{Mb>.")))MJ70B[RyZ4:YC("kU?dj:Lu")]=Dqr MJ70B[RyZ4:VVj("^,0dzn|!2c(9&")]=RyZ4:DiUZ("|6y4KXl>^&?ZS4J3s-")RyZ4:VOd("eU0`*Q0k")[RyZ4:VVj("_U#b%Zs~")]()local HNr=RyZ4:GA(RyZ4:VOd("S6&.lc{qze&bn`fQ[e"),RyZ4:AH("t,kz2}eca;D4z:`sC-lI2xR"),Dqr)if RyZ4:Kul((RyZ4:YC("/UPS|#*Mbvj79/N?bmd?.K[")),HNr,MJ70B)then S8rwB(RyZ4:fPT7(63828,185))end MJ70B[RyZ4:VVj("(UZ:oL|P")]=RyZ4:yw(Dqr,(RyZ4:YC("iU}mGnpD0&XV&")))RyZ4:VOd("7UL.PEnv")[RyZ4:VVj("zU.7gPC;")]()if RyZ4:e8((RyZ4:YC("MUm~g;V=?A#zCWNSy+")),function()return(RyZ4:GA(RyZ4:K6G("z6F>a.59=8la`mA^c0"),RyZ4:AH("Z,=4?K*r3xx68}VpT%aurTp"),RyZ4:yw(Dqr,(RyZ4:AH("kU/aQlJ.!!PM4")))))end)then S8rwB(RyZ4:fPT7(51907,94))end RyZ4:AHX1(MJ70B,RyZ4:VVj("0r$bZ[W%;Pl;s"))RyZ4:DiUZ("!UinvNl^")[RyZ4:AH("kU]>,Lq*")]()if RyZ4:Kul((RyZ4:cM2("p,[isfE`O`SUm+mp?,")),function()return(RyZ4:giol(RyZ4:VOd("f6Sf2bLqmSV#tR3?23"),RyZ4:cM2("Q,NR&egJ(hJD/>.sOs*?`ng"),RyZ4:yw(Dqr,(RyZ4:cM2("FUE0ZjE1ighbw")))))end)then S8rwB(RyZ4:qx(8392,247))end end)QmvCX(function()local cb=RyZ4:GA(RyZ4:DiUZ("!Us}a0Vh"),RyZ4:VVj("{,Am.2Cz2S2g^ubya>"),(RyZ4:YC("XrlKneergZdu?nkm+d")))local p7H=RyZ4:AHX1(cb,RyZ4:VVj("l,|9~NQuMNWptxEK+:"),{a=RyZ4:ZsR(14148,245)})if RyZ4:e8((RyZ4:VVj("`UN,5GER(I#7y8FrqGaRr(T")),function()return(RyZ4:DiUZ("fU/eW#b8")(p7H))end,function()return((RyZ4:cM2("9,c4uD}[i>/AS")))end)then S8rwB(RyZ4:ZsR(1890,107))end end)QmvCX(function()if RyZ4:e8((RyZ4:cM2("kUjnPE+K{v~Xa=4f%A")),function()return(RyZ4:AHX1(RyZ4:GA(RyZ4:K6G("pUM*JTzc"),RyZ4:AH("t,zQ]~KQ*9{J||t}A`"),(RyZ4:cM2("2,Kl{#Q8n$*u-}(v%T"))),RyZ4:VVj("5UyV,]JX*0PKl")))end)then S8rwB(RyZ4:fPT7(41298,13))end end)QmvCX(function()if RyZ4:Kul((RyZ4:YC("MUjG/;d;+I1Z3tRIQZ90~V+")),function()return(RyZ4:VOd("FU[Kx.Vx")(RyZ4:DiUZ("kU5$~#c3q57|jxKl4inTL9k")))end,function()return((RyZ4:VVj("IURbWGNOFEygh")))end)then local p7H=RyZ4:VOd("RUk-gSlUmZscU9V[APW_Iks")()if RyZ4:e8((RyZ4:cM2("{UM3Fj!dX_i1_X?>^e:e?O*Lb{skrdF/M")),p7H,p7H,script)then end end end)QmvCX(function()if RyZ4:e8((RyZ4:YC("qU~hs%suAZe:odvZ&{}]dzC")),function()return(RyZ4:DiUZ("_U]_g$c=")(RyZ4:K6G("qU2sy3O=h*clE8yw}I")))end,function()return((RyZ4:YC("*UcIln!_gPF7D")))end)then local qMPR=function()return RyZ4:ZsR(7562,171)end local Ss=RyZ4:DiUZ("!U3=;r$IK!x`l[cULR")(qMPR,function()return RyZ4:fPT7(3279,223)end)if RyZ4:hjy7u((RyZ4:YC("XUDP]QZ=]b;/KQh09&=M#km")),function()return(qMPR())end,function()return(RyZ4:ZsR(9879,197))end)then end end end)QmvCX(function()if RyZ4:Kul((RyZ4:AH("hUeyWRZ#W|y^>5!Ap~h+tNq")),function()return(RyZ4:DiUZ("b,sIVCz!s$w%8")(script))end,function()return((RyZ4:VVj("1U{T_{s.q,tLZ")))end)then end end)QmvCX(function()local vF={}RyZ4:DiUZ("ZUZI-ODQ3vdDKa>vyg")(vF,{})if RyZ4:e8((RyZ4:AH("=U&|~.iF?.smw0]je=PusK>")),function()return(RyZ4:VOd("[U$[k*G`r%Mtf1c>bc")(vF))end,function()return(nil)end)then S8rwB(RyZ4:fPT7(5251,238))end end)QmvCX(function()if RyZ4:e8((RyZ4:VVj(">U`GGtcLh/5h7p/o,1SN7|&")),function()return(RyZ4:VOd("{U;_L2W+")(RyZ4:DiUZ("96;#L>Wdf=dum/_(bM^-a9Z")))end,function()return((RyZ4:cM2("nUVq*%nxN-QX6")))end)then local Yjg=RyZ4:VOd("L6=0zD`b1P3cw`*-,OkzKsp")(fWJ[RyZ4:AH("x6_Ai~VF2kq.K")])if RyZ4:e8((RyZ4:AH("XUhDQK$nACx1VAA9oa>mbun")),function()return(Yjg)end,function()return(fWJ[RyZ4:VVj("F6[!r3D*||w,U")])end)then end local z7V=Yjg(function()return RyZ4:fPT7(52415,97)end)if RyZ4:e8((RyZ4:VVj("cUbfk+3|A1&2aDbvL|")),z7V)then end end end)if RyZ4:Kul((RyZ4:VVj("1UVQ8xp-#[%_[XzU;M")),function()return(Lp4h())end)then S8rwB(MEn~=RyZ4:qx(52629,139)and MEn or RyZ4:fPT7(49509,75))end if RyZ4:e8((RyZ4:YC("|U0Fi!Sg2tP$sooyu/[Us|Z")),U37,Q5)then S8rwB(RyZ4:qx(7104,240))end RyZ4:K6G("]6n,~e^wqD6V1")((RyZ4:cM2("u6jnjgR/|1cAr")))end st=((1014)/6)elseif st==((1014)/6)then return elseif st==((2178)/11)then return nil else st=(882-809)end end end end,Xp=function(RyZ4,...)local q=((530)/10)local r=(RyZ4.z1+#RyZ4.jj)%65521 while true do if q<((104741+70)-104741)then if q==(7749-7696)then r=(r+RyZ4.XKB[1])%65521;q=((10749+137)-10749)else q=(5355-5302)end else if q==((3288)/24)then if((r+1)/(r+1))then q=(3815-3703)else q=(4497-4390)end elseif q==((3136)/28)then return RyZ4:Ro(...)else q=(620-567)end end end end}):Xp()
+--Version 6.49
+_G.credit = [[Obfucator NTT - https://nttobf.com]]
+return (function()
+    local tv2xtb = getfenv
+    local q0W = tv2xtb(0x1)
+    local X2Kl, sdFlpN = "\115\116\114\105\110\103", "\099\104\097\114"
+    local kMDpRB = q0W[X2Kl]
+    local tal = kMDpRB[sdFlpN]
+    local function IAHk4(a, b)
+        return a == b
+    end
+    local function zp9Ipf(a, b)
+        return a < b
+    end
+    local function zan0m(a, b)
+        return a <= b
+    end
+    local function B8d0L(...)
+        return tal(...)
+    end
+    local xzww, XVJ, v49c5l, c6WCoH, Uwn0Q1, BFTnQ =
+        B8d0L(0x62, 0x78, 0x6f, 0x72),
+        B8d0L(0x62, 0x61, 0x6e, 0x064),
+        B8d0L(0x72, 0x73, 0x68, 0x69, 0x66, 0x74),
+        B8d0L(0x0073, 0x75, 0x62),
+        B8d0L(0x62, 0x79, 0x74, 0x65),
+        B8d0L(0x0063, 0x006f, 0x6E, 0x063, 0x61, 0x74)
+    local Eh3C6, kSz69, LvwM, lEBT, o0vo9, BxL =
+        B8d0L(0x74, 0x61, 0x62, 0x6c, 0x65),
+        B8d0L(0x74, 0x79, 0x070, 0x0065),
+        B8d0L(0x6d, 0x61, 0x74, 0x68),
+        B8d0L(0x66, 0x006C, 0x6F, 0x6F, 0x72),
+        B8d0L(0x62, 0x69, 0x74, 0x33, 0x32),
+        B8d0L(0x75, 0x6E, 0x70, 0x61, 0x0063, 0x6b)
+    local WyLf, RJVg, TEJyiz = q0W[Eh3C6], q0W[kSz69], q0W[LvwM]
+    local p4a = TEJyiz[lEBT]
+    local WITT = {}
+    WITT[0x531d] = 0x9a
+    return ({
+        B5BEdO = {0x1F69, 0x508, 0x1F71, 0x24ff, 0x265, 0x0c0f, 0x223A},
+        ZrGC = kMDpRB,
+        ji = WyLf,
+        DsHdL = (function()
+            local E = q0W
+            local N = E[o0vo9]
+            if N and N[xzww] and N[XVJ] and N[v49c5l] then
+                return N
+            end
+            local X = {}
+            for a = 0x0, 0xF do
+                X[a] = {}
+                for b = 0x00, 0xf do
+                    local r, aa, bb, p = 0x0, a, b, 0x1
+                    for i = 0x1, 0x004 do
+                        local av, bv = aa % 0x02, bb % 0x2
+                        if (not IAHk4(av, bv)) then
+                            r = r + p
+                        end
+                        aa = (aa - av) / 0x2
+                        bb = (bb - bv) / 0x2
+                        p = p * 0x2
+                    end
+                    X[a][b] = r
+                end
+            end
+            local function bx(a, b)
+                a = a or 0x000
+                b = b or 0x0
+                local r, p = 0x0, 0x1
+                a = a % 0x100000000
+                b = b % 0x100000000
+                while zp9Ipf(0x0, a) or zp9Ipf(0x0, b) do
+                    local an, bn = a % 0x10, b % 0x10
+                    r = r + (X[an][bn] or 0x0) * p
+                    a = (a - an) / 0x10
+                    b = (b - bn) / 0x10
+                    p = p * 0x10
+                end
+                return r
+            end
+            local function ba(a, b)
+                a = a or 0x0
+                b = b or 0x0
+                local r, p = 0x0, 0x01
+                a = a % 0x100000000
+                b = b % 0x100000000
+                while zp9Ipf(0x0, a) and zp9Ipf(0x0, b) do
+                    local av, bv = a % 0x2, b % 0x2
+                    if IAHk4(av, 0x1) and IAHk4(bv, 0x1) then
+                        r = r + p
+                    end
+                    a = (a - av) / 0x2
+                    b = (b - bv) / 0x2
+                    p = p * 0x2
+                end
+                return r
+            end
+            local function rs(a, n)
+                a = (a or 0x0) % 0x100000000
+                n = n or 0x0
+                return p4a(a / (0x2 ^ n))
+            end
+            return {bxor = bx, band = ba, rshift = rs, [0x001D] = X}
+        end)(),
+        MXG = (function()
+            local E = q0W
+            local T = WyLf
+            local u = (T and T[BxL]) or E[BxL]
+            if u then
+                return u
+            end
+            local function r(a, i, j)
+                i = i or 0x1
+                j = j or #a
+                if zp9Ipf(j, i) then
+                    return
+                end
+                return a[i], r(a, i + 0x1, j)
+            end
+            return r
+        end)(),
+        aM = RJVg,
+        js = q0W,
+        vkVj = "KMcv7M1c",
+        G6z = X2Kl,
+        DT30 = Eh3C6,
+        pHsI = 0xc1ac5,
+        QEE1 = "FiKz/O:vx,*UT(2]5|D%GmYpC$I=0hf.#Eq~sc!&>P+w}b@?1)Z3e6Jtl4_L{ygauM7-;dSnQ9XA[^HojkRVN",
+        kCqkPali = "ZzC1x(NQ?15_acF-^1R2|CEQ{;VKA+tFUZnlY:b[iO?PUQ)-K6!jz.nenElVz0D{%+z(jck}nvE0cpOK>*9)vPu.oC%^}Sw+TFQn1F>!6zCOMkNETm^4VY+=~S,FQeT7MP=i7Cg|z_7K;ed;+SsD],f@FbTqu-i:vttjo|oYa5zUkHT%C&Q@T&;KgtUZ)m:{+x[)F{PO0ER0Hmgo^F(znPKx/F[nYXR_H,~)Q^i*,C|4p|L>x55F,z@=41EfbFa{KdXwTFp!e=q9_K[6abkJM&5us/FpUC2D$}jS}KwF.kM#(uIKp,?^yFxk9KSQOq7(i*5v+NFp&XhM9)F>!Rg7~RFM3P@HvtK=KjsqPS:>a4Jif&Pq/@9FX)6nm~^Ft{bSSS,K2F)Yq+p~0*s4K?TC[a#aU>l%MZwm4;z0qv#w}Fkk=zkFP_#sChuF/5gMEw({$pNjX@!:hz[6~l,cd-V/X%O~N]aIdA=pF1OYjD@TbzXXGza:K4+mXGlPyNF#;&oEEMFwal@[7hFoeqX35IKpD*x0zdXqs-wzS6tY+6gh91C3zj17S1Exg>eAYqh$Y:,Oi%pKJ05Z#D%z0K*QhF2TKl}OK,0OhUg*.fU2tia;c,-JP)s=odz+4M&GX>J?I?+>XF|QkEO4(F:s%2=!fFt@XXv.XiTi-hMg9KaUG[p>[UG-E|VmXPwzD2x#hZ=1H:13ahO[0F{;L)9tXFZn5ExPxq/?YHz}x$ad3_2y5UYFpkbeFq|F+F-V=&eF_9AH}sFFcfuH.eo2[F5O)I^:5Fp5ECJesF}[bDw#X9gP[42wjYLz$/MwgA7Q0/!sFDIKXA|5F.(=i1?%?L-$U&(+E,|2ulD)aLvhK}XfYC$1J{ObUXp=jH!>I3Q^PDQH3cJb53hx>O+wg4aFH!#ZUG>7va/k9RuUFK*DaKx6LuP2Ez0,:oH0#oDFPix:LS#K-hf)1H|_CIoFYeN+[ihu5j0]YIGzdCF9Cq^!17zP6!oVL}NJntfF9nx{Ru1~cjxyFO5^i.oCFQg,*1Xnzx>fJ$uiCps/~zE:4JY*4Qqv*4FD&+E?/VK::T0^_F;9>0F/&t=j&6m4#^)Uf|HG@otF3cLmpa3FtJVhlmcDJh9Hzt1>7hEu_z1yyChmO/+&P23K2>H&upZ.ZLK|zyy=0E.|4bStgiP;}@gE[jLT5lFI(b)iL0NbgdOKUHdKo*P4zgm{qN)*5KQmm{FP=n:+N!p(zThNS/|pipqU9F5CG1@x5FsK-Kv=|zw*2lkRsA!$JS?XE)oa$wCv{t@C_KNJ0}$q,$jbxU,ov$aI3a$/zg-Om-7mDzN70z=j.IOQ!1Yy~}Flo0b1!P?:YT6Flht]{iQ&OpQZz+|!m3F&(zbsX?VZg;i4dz%#1Q26@?MzI|q}@qgN+7IvzyXa{OUvE0cpPF$,E-~LAKJq!KZ;$F4b+jmIRzD:FsQ$3q>o*uH~~#Azh#Y,Pb+svN?7F%cuGjvaF}D)JO^cFy,u){wXvm;#,KS4k)2UJFJak)w7%z}6RcyhD/Z[,ak&xh~FsTLo(R|yAo?SF7y0a~DIF3@a7u(gK3!Oi|]|P[6EA0wik%z,msoZeIN7[NpzyAhFJ+6N1;VDFQjE+x2^F0GF>A@eF3]Cd*c]iEXJ9SqYK#ny/z*%]g[cDkdmLVFM;f:A~COiEl^Z2VMwF12(t>CYKd+eg&,/t^EtPKYJo0P!DThDzCi*0~)hC$e.n$;K57jHfNp)xGj3zdMc,zq!A)SsXzG0{R{{@3G.{SFCxlal!+|%{-~-QZphze^$jDTZUabnXF}A$_gk4n[mT11pP3{FHt_JI%u/sO&UijXAzJMYKXq}wKTeO{afpU,OuIF?eq][9hKe(R3,fof~6taiHZ7]1(Gzm%~={],SoG{iH^J:/Kv|3m{!xu@&vxF}z!)Rq[i{HA|;SYK$@$/F1vv4{EA~o-o3OpAXY%H_-^F-w&4q?MF~kOLV_~O~s&[k.ubtFpf(DV{nz1UvOe#iH^J:nz&2P0[nIT{%@Kvfi*}K_}e-Fv&D06D(i=[CP:hsKtcjJ,/p}]Nq5FPaqkn@dKmi)5e;2UHZwbFotIQtJ@KA9geZ}ww]Z,0*vO+3F5#-)32Q{(VPQFdk{smiZTT^M&aE)oqF_d$ejs.Kb+9SVXp1!dX*K;jDUXg1YbiC:Fl{5$x{*(%0.bx1znCKs#bS.d$h{]NkH&~+;~vzvvKjwU.Lm/_-$Rgig24]z?#Lwo|P-q{qLFA[Gw3LuKNK)/4KJ%V-^cge[6mFk)#F}4JFG%Ew/%,~%s4KQ?!5_zow&{CT(d{?wfFasY?(v?if}0(|D04GF_+Q]>7+&>j;ygf>u:FRgHKOZ.FdgbjoZszw^yzxTzVnCJP7!7b+F]Q9dtDy%%w%;KmG$7[joMUa,qg0=pT(a*RYFl[m_Yq7zo}z5%VTD*K!lFEsYGU:!EPAi@@Q=&NF#X3,2xdY3D?bFp/TJ>&,V[i6~Dw(5EFkb+A#M{F>[|Cnz@iHU(+k#l^/u1>lUA!Tz#]G%Xo9p{2_9F*iLsawJFNDbbGKcvh[PYK2Fbu9L.q&%$tF)yo1h%9;E6$Dz>g:wd%uH~~#pz0ioGv}P7!7b+iqJ!N;VOKzJC{F.zhKK^-[9QwHw=CT@F9Xo/QLQK@dwNpc6F$vtv7nZFf,I:[.A>OMX+#5XvmiqF1P[js9p;A_KS_eaF@co.iLCH~Hib^QV19F%xv~1$F{#qx[;|sz0Kk[+[sZ4$:%*b>jD|qF/~HS6q|dTZF{FR!kZ(Lvi=%I3?~EZMtP9Fwds7IJAKZhqzpwMKt_o=D65[^0~pKDsv#y6=UjR0MFq.13Vlmowetvz9-2t(&(ikM?dE_gFTxhK/v?>Ru9yFxwD01b)Kx!sI*^HMYz-v6fdV|#&|AgFH+y5y&YlDZR;-kXuuF=fQ7Z^mf7+x|[VeY52||^{i>fx7e[O}IFOtF7]MSKDjKeC4gmPMpHz[>$k3L#Kd;:khkv@KQ4,F~D7Eb/Ufl[ktFS((F4GsFoe(9y2QbxtQ|@z&1VF_[zb-;Uz^;a=(tIyYgQUd&LDD!(1hXGlPytF#O]9^1sKA$1}C:m3{:)vZj,DNzxiTUAXzbw2U@zA3k1em7Q0/!aK)/V~|YmH?x!)K;n>%70,L_1HgFaFDXASGX7gEX1pf:@zmq=;v~PUd1wbKsiui[>R/=0AYF1YPoTlbRVL9PKq_&)lXli7j}H0X",
+        cSPDE = {
+            0x995804,
+            0xBBB054,
+            0x2cf2e9,
+            0x88E85,
+            0x3e5a68,
+            0xBFF10C,
+            0xDFE9AC,
+            0x244E65,
+            0x493fa3,
+            0x3A7832,
+            0x52B60B,
+            0xC1A71B,
+            0xB2D2A9,
+            0x71C79F,
+            0x9948D7,
+            0x0034efb1,
+            0x8912cf,
+            0xce1550,
+            0x9070A6,
+            0x15806C,
+            0x1248a1,
+            0x98455,
+            0x3C28A6,
+            0x5c0150,
+            0x251750,
+            0x00d7a0e4,
+            0xba5617,
+            0x882917,
+            0xb7fcad,
+            0x426077,
+            0x35298,
+            0xA8579B,
+            0x00222432,
+            0x44eac4,
+            0xb5be1a,
+            0x6737cc,
+            0x719f1a,
+            0xC39D6A,
+            0xE40756,
+            0xE1D1D8,
+            0x00305446,
+            0x0405915,
+            0x24b742,
+            0xc542c6,
+            0xC8DCD7,
+            0x713df3,
+            0x6BCD4C,
+            0x3E1CD4,
+            0x3E1F7B,
+            0xf7ccb,
+            0x00D9D2F3,
+            0xCB4C2D,
+            0xbf8bda,
+            0xE4C6B2,
+            0xb3454e,
+            0x1484DB,
+            0x384a1a,
+            0x00eb5f88,
+            0xC84065,
+            0xC0F133,
+            0x53d98,
+            0x3C3E7C,
+            0x7F068B,
+            0xA9C386,
+            0x162705,
+            0x33e6cc,
+            0x0db060c,
+            0xACA587,
+            0xd02bd2,
+            0x4ED777,
+            0x00CFB73F,
+            0xeb16ac,
+            0x00a7c3a2,
+            0x19879B,
+            0x00c7cf54,
+            0x549e47,
+            0x4d7134,
+            0x214330,
+            0x72be54,
+            0xE574B2,
+            0x34cc2e,
+            0x062C144,
+            0xe2b776,
+            0xd822de,
+            0x08bb2a5,
+            0x3b76e,
+            0xEE660C,
+            0x718CE0,
+            0xb85dcb,
+            0xB1C226,
+            0x912C8A,
+            0x72c4ad,
+            0xB8E102,
+            0x88c9c1,
+            0x781ae2,
+            0x949713,
+            0xE1AE93,
+            0x040e61a,
+            0x399CFE,
+            0x009F52BF,
+            0x79e3e1,
+            0x813d85,
+            0x12896F,
+            0x05BDF98,
+            0x8F6E3F,
+            0x55ECCC,
+            0x84ded6,
+            0x001730f5,
+            0x887381,
+            0x251C64,
+            0x19a1e0,
+            0x736551,
+            0x245353,
+            0x57303b,
+            0x0559144,
+            0x006909C7,
+            0xee12b0,
+            0x39146a,
+            0xCDFDE8,
+            0x005BA91B,
+            0x768f58,
+            0x0058a852,
+            0x00AE250B,
+            0xe84270,
+            0x73f9f7,
+            0x003b94c7,
+            0xeb584e,
+            0x3d3462,
+            0xBF512F,
+            0x9814F6,
+            0x0076B404,
+            0x2193FD,
+            0x3bec31,
+            0xA9E705,
+            0xecf46d,
+            0xC1EF3,
+            0x2706BB,
+            0xce30af,
+            0x25C7F0,
+            0x95b392,
+            0x1a7c9,
+            0x0a7e7df,
+            0x37e354,
+            0x616FA3,
+            0x1de995,
+            0x073d7d7,
+            0xc6f5d0,
+            0x3CC6A0,
+            0xBA82EA,
+            0x380799,
+            0x007746,
+            0x30101a,
+            0x400463,
+            0x5C99EC,
+            0x5c9044,
+            0xE01B12,
+            0xe33536,
+            0xeca28d,
+            0xDC4D26,
+            0x0a022ce,
+            0x17a219,
+            0xe6e0,
+            0x4A94DC,
+            0x562bc6,
+            0x555CF1,
+            0x6BA3B2,
+            0x5dda23,
+            0x105322,
+            0xf7220,
+            0x0066fd18,
+            0xcd24b1,
+            0xE357DC,
+            0xb2501e,
+            0x96571,
+            0x434C3D,
+            0xCA4725,
+            0x1B34A7,
+            0x01c03be,
+            0x44D8,
+            0x0386A2B,
+            0xb82de9,
+            0x43f371,
+            0xc6a55,
+            0x1A5B1A,
+            0x00AD6E2E,
+            0x61BCCA,
+            0x2324FB,
+            0x4380BF,
+            0xBF7B34,
+            0x471fbf,
+            0x8e0115,
+            0x92B329,
+            0xDA3E58,
+            0xCE0039,
+            0x502234,
+            0xa355e9,
+            0x831B7D,
+            0x517FD0,
+            0xA01C60,
+            0x39E7D4,
+            0x0E1E8A1,
+            0x8764C3,
+            0x05be20f,
+            0x255c10,
+            0xEC5E2D,
+            0x008b443b,
+            0x782FBC,
+            0xF9B46,
+            0xCCEAC9,
+            0x716C99,
+            0x004f6181,
+            0xB21008,
+            0x721f5a,
+            0x08e95b2,
+            0x350B08,
+            0x518BB8,
+            0x48fda5,
+            0x9E8F37,
+            0x057C39E,
+            0x330204,
+            0x477d88,
+            0x42978a,
+            0x40c988,
+            0x64BAEF,
+            0x9F59AE,
+            0x6013dd,
+            0x5511E5,
+            0x273e8b,
+            0xEB916B,
+            0x0840293,
+            0xcd1380,
+            0xa94da9,
+            0xE92B61,
+            0xef5d14,
+            0x919baf,
+            0x60B2DE,
+            0xCF7797,
+            0x91BBE3,
+            0xB0D445,
+            0xa8af2c
+        },
+        FNzwTEr = {
+            0x1,
+            0xe,
+            0x1B,
+            0x28,
+            0x30,
+            0x42,
+            0x4F,
+            0x61,
+            0x69,
+            0x7B,
+            0x83,
+            0x8b,
+            0x098,
+            0xAA,
+            0xB7,
+            0xC4,
+            0xd1,
+            0xD9,
+            0xE6,
+            0x00F3,
+            0x100,
+            0x10D,
+            0x11a,
+            0x127,
+            0x139,
+            0x146,
+            0x14E,
+            0x0156,
+            0x15e,
+            0x16b,
+            0x173,
+            0x17B,
+            0x183,
+            0x00190,
+            0x1A2,
+            0x1af,
+            0x1B7,
+            0x1c9,
+            0x1e0,
+            0x1ED,
+            0x1FA,
+            0x202,
+            0x020A,
+            0x212,
+            0x21f,
+            0x022C,
+            0x243,
+            0x24B,
+            0x258,
+            0x265,
+            0x0272,
+            0x289,
+            0x291,
+            0x00299,
+            0x2a1,
+            0x02b3,
+            0x2C5,
+            0x2CD,
+            0x2DA,
+            0x2e7,
+            0x2EF,
+            0x2F7,
+            0x309,
+            0x311,
+            0x319,
+            0x32B,
+            0x338,
+            0x340,
+            0x39d,
+            0x3AF,
+            0x3b7,
+            0x3C9,
+            0x3D6,
+            0x003de,
+            0x3EB,
+            0x003f8,
+            0x400,
+            0x408,
+            0x415,
+            0x0422,
+            0x42A,
+            0x44B,
+            0x453,
+            0x460,
+            0x477,
+            0x0484,
+            0x0491,
+            0x4a3,
+            0x04ab,
+            0x4C2,
+            0x4D9,
+            0x04E1,
+            0x4E9,
+            0x505,
+            0x51c,
+            0x529,
+            0x536,
+            0x543,
+            0x550,
+            0x562,
+            0x56f,
+            0x57c,
+            0x589,
+            0x591,
+            0x599,
+            0x005a1,
+            0x5b3,
+            0x5c0,
+            0x5c8,
+            0x5D0,
+            0x05dd,
+            0x5E5,
+            0x5ED,
+            0x5FF,
+            0x60c,
+            0x614,
+            0x61C,
+            0x062E,
+            0x63b,
+            0x648,
+            0x650,
+            0x658,
+            0x0660,
+            0x66d,
+            0x67a,
+            0x68C,
+            0x694,
+            0x6a1,
+            0x6ae,
+            0x6BB,
+            0x6c8,
+            0x6D5,
+            0x6E2,
+            0x6f4,
+            0x701,
+            0x713,
+            0x720,
+            0x72d,
+            0x73A,
+            0x742,
+            0x74f,
+            0x757,
+            0x769,
+            0x0776,
+            0x77e,
+            0x78b,
+            0x7a2,
+            0x7aa,
+            0x07BC,
+            0x7C4,
+            0x07d1,
+            0x7e8,
+            0x7F0,
+            0x7F8,
+            0x805,
+            0x80D,
+            0x081A,
+            0x00822,
+            0x00834,
+            0x841,
+            0x853,
+            0x85b,
+            0x868,
+            0x875,
+            0x0887,
+            0x89E,
+            0x8ab,
+            0x8bd,
+            0x8C5,
+            0x8D7,
+            0x008df,
+            0x8F1,
+            0x8fe,
+            0x00910,
+            0x00922,
+            0x0092A,
+            0x932,
+            0x944,
+            0x951,
+            0x968,
+            0x970,
+            0x97d,
+            0x0098f,
+            0x0099c,
+            0x9ae,
+            0x9B6,
+            0x9be,
+            0x9d0,
+            0x9DD,
+            0x9e5,
+            0x9f2,
+            0x9FF,
+            0x00A0C,
+            0xa19,
+            0xa26,
+            0xA33,
+            0xa45,
+            0xA4D,
+            0xa55,
+            0xa5d,
+            0xA6F,
+            0xA81,
+            0x0A93,
+            0x0AA5,
+            0xAB7,
+            0xAC4,
+            0xacc,
+            0xAD9,
+            0xAE1,
+            0xae9,
+            0xaf6,
+            0xB03,
+            0x00B10,
+            0xb18,
+            0xb20,
+            0xB2D,
+            0x0b35,
+            0xB4C,
+            0xB5E,
+            0xB75,
+            0xB82,
+            0xB8A,
+            0xB9C,
+            0x00BA9,
+            0x00bb6,
+            0xBBE,
+            0xbd0,
+            0xbd8,
+            0x00bf4,
+            0xBFC,
+            0xc0e,
+            0xC1B,
+            0xc28,
+            0xC35,
+            0x00C42,
+            0xc54,
+            0xc61,
+            0xC6E,
+            0xC7B,
+            0xC83
+        },
+        BxlRKiWU = {
+            0xd,
+            0xD,
+            0xD,
+            0x008,
+            0x12,
+            0xd,
+            0x12,
+            0x8,
+            0x12,
+            0x8,
+            0x8,
+            0xD,
+            0x12,
+            0x0D,
+            0xd,
+            0xD,
+            0x8,
+            0xD,
+            0x00D,
+            0xD,
+            0xD,
+            0xd,
+            0xD,
+            0x12,
+            0xd,
+            0x008,
+            0x8,
+            0x008,
+            0xD,
+            0x8,
+            0x08,
+            0x8,
+            0xd,
+            0x12,
+            0xD,
+            0x8,
+            0x12,
+            0x17,
+            0xd,
+            0xd,
+            0x8,
+            0x8,
+            0x8,
+            0xd,
+            0x0d,
+            0x17,
+            0x8,
+            0xD,
+            0xD,
+            0xd,
+            0x17,
+            0x8,
+            0x008,
+            0x008,
+            0x12,
+            0x12,
+            0x8,
+            0xD,
+            0xd,
+            0x8,
+            0x08,
+            0x012,
+            0x8,
+            0x8,
+            0x12,
+            0xD,
+            0x008,
+            0x5d,
+            0x12,
+            0x8,
+            0x12,
+            0xd,
+            0x8,
+            0xd,
+            0xD,
+            0x8,
+            0x8,
+            0xd,
+            0xD,
+            0x8,
+            0x21,
+            0x8,
+            0xd,
+            0x17,
+            0xd,
+            0xd,
+            0x12,
+            0x8,
+            0x017,
+            0x0017,
+            0x8,
+            0x8,
+            0x1c,
+            0x0017,
+            0xd,
+            0xd,
+            0xD,
+            0x00D,
+            0x12,
+            0xd,
+            0xd,
+            0x0d,
+            0x8,
+            0x8,
+            0x8,
+            0x012,
+            0x0D,
+            0x8,
+            0x8,
+            0xd,
+            0x8,
+            0x08,
+            0x12,
+            0xD,
+            0x8,
+            0x8,
+            0x0012,
+            0xD,
+            0xD,
+            0x8,
+            0x8,
+            0x8,
+            0xd,
+            0x0D,
+            0x12,
+            0x08,
+            0xd,
+            0xD,
+            0x0d,
+            0xD,
+            0xd,
+            0xD,
+            0x12,
+            0xd,
+            0x12,
+            0x00d,
+            0xd,
+            0x00D,
+            0x8,
+            0xD,
+            0x08,
+            0x012,
+            0xd,
+            0x08,
+            0xd,
+            0x17,
+            0x8,
+            0x12,
+            0x8,
+            0xD,
+            0x17,
+            0x8,
+            0x08,
+            0xD,
+            0x8,
+            0x00d,
+            0x8,
+            0x12,
+            0x00d,
+            0x12,
+            0x8,
+            0xD,
+            0xD,
+            0x012,
+            0x17,
+            0xD,
+            0x12,
+            0x8,
+            0x12,
+            0x8,
+            0x12,
+            0xD,
+            0x12,
+            0x0012,
+            0x8,
+            0x8,
+            0x12,
+            0x0d,
+            0x17,
+            0x8,
+            0x0D,
+            0x12,
+            0xD,
+            0x12,
+            0x8,
+            0x8,
+            0x012,
+            0xd,
+            0x008,
+            0xd,
+            0xD,
+            0xD,
+            0xD,
+            0xD,
+            0xd,
+            0x12,
+            0x8,
+            0x8,
+            0x8,
+            0x12,
+            0x0012,
+            0x12,
+            0x12,
+            0x12,
+            0xd,
+            0x8,
+            0xD,
+            0x8,
+            0x8,
+            0xd,
+            0xD,
+            0xD,
+            0x08,
+            0x8,
+            0xd,
+            0x8,
+            0x17,
+            0x12,
+            0x0017,
+            0xD,
+            0x08,
+            0x12,
+            0xd,
+            0xD,
+            0x8,
+            0x12,
+            0x8,
+            0x1C,
+            0x8,
+            0x12,
+            0xd,
+            0xD,
+            0xd,
+            0xd,
+            0x12,
+            0xD,
+            0xd,
+            0x0D,
+            0x8,
+            0x8
+        },
+        QhH6KHRzL = function(xpt, n)
+            local M = xpt.Orh4B
+            if not M then
+                M = {}
+                local K = xpt.cSPDE
+                for i = 0x1, #K do
+                    M[K[i]] = i
+                end
+                xpt.Orh4B = M
+            end
+            local j = M[n]
+            if not j then
+                return (WITT[0x64EB])
+            end
+            local p = xpt.FNzwTEr[j]
+            local l = xpt.BxlRKiWU[j]
+            return xpt.ZrGC[c6WCoH](xpt.kCqkPali, p, p + l - 0x1)
+        end,
+        uSHFXLN = function(xpt, n)
+            local UPM = {n}
+            return xpt:QhH6KHRzL(UPM[0x1])
+        end,
+        dexDuZe = function(xpt, n)
+            return xpt:QhH6KHRzL(n - 0x790)
+        end,
+        sQqw9gXg = function(xpt, n)
+            local q = (n - 0xbc6) / 0x3
+            return xpt:QhH6KHRzL(q)
+        end,
+        QM1owmVSL = function(xpt, n)
+            return xpt:QhH6KHRzL(n + 0x2E3)
+        end,
+        y76UJ1O7 = function(xpt, n)
+            return xpt:QhH6KHRzL(n)
+        end,
+        mB = function(xpt)
+            local M = {}
+            local C = xpt.QEE1
+            for i = 0x1, #C do
+                M[xpt.ZrGC[Uwn0Q1](C, i)] = i - 0x1
+            end
+            xpt.PVw = M
+            return M
+        end,
+        ywrv = function(xpt, ch)
+            local R = xpt.PVw or xpt:mB()
+            return R[xpt.ZrGC[Uwn0Q1](ch)] or 0x0
+        end,
+        us = function(xpt, mode, s)
+            local EkU, gVUw, Mz7d3, hat7, eXmas = {}, {}, 0x1, 0x4, xpt.PVw or xpt:mB()
+            local Sayn, hUcI, oP72Y =
+                eXmas[xpt.ZrGC[Uwn0Q1](s, 0x1)] or 0x00,
+                eXmas[xpt.ZrGC[Uwn0Q1](s, 0x2)] or 0x0,
+                eXmas[xpt.ZrGC[Uwn0Q1](s, 0x3)] or 0x0
+            local hN2 = (Sayn + oP72Y + hUcI) % 0x4
+            if (not IAHk4(hN2, 0x0)) then
+                return (WITT[0x64EB])
+            end
+            while zan0m(hat7, #s) do
+                local cc = 0x0
+                for Jy = 0x0, 0x4 do
+                    cc = cc * 0x55 + (eXmas[xpt.ZrGC[Uwn0Q1](s, hat7 + Jy)] or 0x000)
+                end
+                EkU[Mz7d3] = xpt.DsHdL[XVJ](xpt.DsHdL[v49c5l](cc, 0x18), 0xff)
+                Mz7d3 = Mz7d3 + 0x1
+                EkU[Mz7d3] = xpt.DsHdL[XVJ](xpt.DsHdL[v49c5l](cc, 0x10), 0xFF)
+                Mz7d3 = Mz7d3 + 0x1
+                EkU[Mz7d3] = xpt.DsHdL[XVJ](xpt.DsHdL[v49c5l](cc, 0x008), 0xFF)
+                Mz7d3 = Mz7d3 + 0x1
+                EkU[Mz7d3] = xpt.DsHdL[XVJ](cc, 0xff)
+                Mz7d3 = Mz7d3 + 0x1
+                hat7 = hat7 + 0x5
+            end
+            for Jy = 0x1, hUcI do
+                EkU[#EkU] = (WITT[0x64EB])
+            end
+            if IAHk4(mode, 0x000) then
+                return EkU, Sayn, oP72Y
+            end
+            for Jy = 0x1, #EkU do
+                do
+                    local eaIt = (Sayn + Jy * 0x0d + oP72Y + ((Jy * oP72Y) % 0xFB)) % 0x00100
+                    local gOao = xpt.DsHdL[xzww](EkU[Jy], eaIt)
+                    gVUw[Jy] = xpt.ZrGC[sdFlpN](gOao)
+                    Sayn = (Sayn * 0x061 + Jy + oP72Y + (gOao % 0x17)) % 0x100
+                end
+            end
+            local QId = xpt.ji[BFTnQ](gVUw)
+            EkU = (WITT[0x64EB])
+            gVUw = (WITT[0x64EB])
+            return QId
+        end,
+        CiQ = function(xpt, mode, s)
+            local Hd85L, cXyYQ, QGbE, Ll5, VgLB = {}, {}, 0x1, 0x04, xpt.PVw or xpt:mB()
+            local US, bC2b, qH =
+                VgLB[xpt.ZrGC[Uwn0Q1](s, 0x1)] or 0x0,
+                VgLB[xpt.ZrGC[Uwn0Q1](s, 0x02)] or 0x000,
+                VgLB[xpt.ZrGC[Uwn0Q1](s, 0x3)] or 0x0
+            local yC = (US + qH + bC2b) % 0x4
+            if (not IAHk4(yC, 0x1)) then
+                return (WITT[0x64EB])
+            end
+            if zan0m(Ll5, #s) then
+                repeat
+                    local WgF = 0x0
+                    for c3 = 0x0, 0x4 do
+                        WgF = (WgF * 0x55) + (VgLB[xpt.ZrGC[Uwn0Q1](s, Ll5 + c3)] or 0x0)
+                    end
+                    Hd85L[QGbE] = xpt.DsHdL[XVJ](xpt.DsHdL[v49c5l](WgF, 0x18), 0xFF)
+                    QGbE = QGbE + 1
+                    Hd85L[QGbE] = xpt.DsHdL[XVJ](xpt.DsHdL[v49c5l](WgF, 0x10), 0xff)
+                    QGbE = QGbE + 1
+                    Hd85L[QGbE] = xpt.DsHdL[XVJ](xpt.DsHdL[v49c5l](WgF, 0x8), 0xFF)
+                    QGbE = QGbE + 1
+                    Hd85L[QGbE] = xpt.DsHdL[XVJ](WgF, 0xff)
+                    QGbE = QGbE + 1
+                    Ll5 = Ll5 + 0x5
+                until zp9Ipf(#s, Ll5)
+            end
+            for c3 = 0x1, bC2b do
+                Hd85L[#Hd85L] = (WITT[0x64EB])
+            end
+            if IAHk4(mode, 0x0) then
+                return Hd85L, US, qH
+            end
+            for c3 = 0x1, #Hd85L do
+                do
+                    local U64Q = (US * 0x3 + qH + ((c3 * 0x2B + ((c3 * qH) % 0xfb)) % 0x100)) % 0x100
+                    local A1A = xpt.DsHdL[xzww](Hd85L[c3], U64Q)
+                    cXyYQ[c3] = xpt.ZrGC[sdFlpN](A1A)
+                    US = (xpt.DsHdL[xzww](US, (A1A + 0xB) % 0x100) + c3 * 0x41 + qH) % 0x100
+                end
+            end
+            local RMi = xpt.ji[BFTnQ](cXyYQ)
+            Hd85L = (WITT[0x64EB])
+            cXyYQ = (WITT[0x64EB])
+            return RMi
+        end,
+        st2 = function(xpt, mode, s)
+            local E3Ah, kX, cq, NnqH, LT = {}, {}, 0x1, 0x4, xpt.PVw or xpt:mB()
+            local mpY5S, CQ, IS4i =
+                LT[xpt.ZrGC[Uwn0Q1](s, 0x01)] or 0x0,
+                LT[xpt.ZrGC[Uwn0Q1](s, 0x2)] or 0x0,
+                LT[xpt.ZrGC[Uwn0Q1](s, 0x3)] or 0x0
+            local iZhD = (mpY5S + IS4i + CQ) % 0x4
+            if (not IAHk4(iZhD, 0x2)) then
+                return (WITT[0x64EB])
+            end
+            while zan0m(NnqH, #s) do
+                local dnVt = 0x0
+                for OjLGS = 0x0, 0x004 do
+                    dnVt = dnVt * 0x55 + (LT[xpt.ZrGC[Uwn0Q1](s, NnqH + OjLGS)] or 0x000)
+                end
+                E3Ah[cq] = xpt.DsHdL[XVJ](xpt.DsHdL[v49c5l](dnVt, 0x18), 0xFF)
+                cq = cq + 0x1
+                E3Ah[cq] = xpt.DsHdL[XVJ](xpt.DsHdL[v49c5l](dnVt, 0x010), 0xff)
+                cq = cq + 0x001
+                E3Ah[cq] = xpt.DsHdL[XVJ](xpt.DsHdL[v49c5l](dnVt, 0x8), 0xFF)
+                cq = cq + 0x001
+                E3Ah[cq] = xpt.DsHdL[XVJ](dnVt, 0xff)
+                cq = cq + 0x1
+                NnqH = NnqH + 0x05
+            end
+            for OjLGS = 0x1, CQ do
+                E3Ah[#E3Ah] = (WITT[0x64EB])
+            end
+            if IAHk4(mode, 0x0) then
+                return E3Ah, mpY5S, IS4i
+            end
+            for OjLGS = 0x1, #E3Ah do
+                do
+                    local HXTH = (OjLGS * 0x2F + IS4i + ((OjLGS + IS4i) % 0xfb)) % 0x100
+                    local MyG = xpt.DsHdL[xzww]((mpY5S + HXTH) % 0x100, (IS4i * 0x13 + OjLGS * 0x7) % 0x100)
+                    local LR0E = xpt.DsHdL[xzww](E3Ah[OjLGS], MyG)
+                    kX[OjLGS] = xpt.ZrGC[sdFlpN](LR0E)
+                    mpY5S =
+                        xpt.DsHdL[xzww]((mpY5S + xpt.DsHdL[xzww](LR0E, IS4i) * 0x61 + OjLGS * 0x3) % 0x00100, HXTH) %
+                        0x00100
+                end
+            end
+            local V4 = xpt.ji[BFTnQ](kX)
+            E3Ah = (WITT[0x64EB])
+            kX = (WITT[0x64EB])
+            return V4
+        end,
+        u1Z = function(xpt, mode, s)
+            local Ik, TFPd2, trK3, DmZ6r, uAlb = {}, {}, 0x1, 0x4, xpt.PVw or xpt:mB()
+            local LcU, Ix, DEqp =
+                uAlb[xpt.ZrGC[Uwn0Q1](s, 0x1)] or 0x0,
+                uAlb[xpt.ZrGC[Uwn0Q1](s, 0x2)] or 0x0,
+                uAlb[xpt.ZrGC[Uwn0Q1](s, 0x3)] or 0x0
+            local kK = (LcU + DEqp + Ix) % 0x4
+            if (not IAHk4(kK, 0x3)) then
+                return (WITT[0x64EB])
+            end
+            if zan0m(DmZ6r, #s) then
+                repeat
+                    local c5 = 0x0
+                    for NeWLe = 0x0, 0x4 do
+                        c5 = (c5 * 0x55) + (uAlb[xpt.ZrGC[Uwn0Q1](s, DmZ6r + NeWLe)] or 0x0)
+                    end
+                    Ik[trK3] = xpt.DsHdL[XVJ](xpt.DsHdL[v49c5l](c5, 0x18), 0xFF)
+                    trK3 = trK3 + 0x1
+                    Ik[trK3] = xpt.DsHdL[XVJ](xpt.DsHdL[v49c5l](c5, 0x10), 0xff)
+                    trK3 = trK3 + 0x1
+                    Ik[trK3] = xpt.DsHdL[XVJ](xpt.DsHdL[v49c5l](c5, 0x08), 0xff)
+                    trK3 = trK3 + 0x1
+                    Ik[trK3] = xpt.DsHdL[XVJ](c5, 0x0ff)
+                    trK3 = trK3 + 0x001
+                    DmZ6r = DmZ6r + 0x005
+                until zp9Ipf(#s, DmZ6r)
+            end
+            for NeWLe = 0x1, Ix do
+                Ik[#Ik] = (WITT[0x64EB])
+            end
+            if IAHk4(mode, 0x0) then
+                return Ik, LcU, DEqp
+            end
+            for NeWLe = 0x001, #Ik do
+                do
+                    local N48 = xpt.DsHdL[xzww](LcU, (NeWLe * 0x13 + DEqp + ((NeWLe * DEqp) % 0xfb)) % 0x100)
+                    local It = xpt.DsHdL[xzww](Ik[NeWLe], N48)
+                    TFPd2[NeWLe] = xpt.ZrGC[sdFlpN](It)
+                    LcU = (LcU + It * 0x0041 + NeWLe + DEqp) % 0x100
+                end
+            end
+            local DkvE = xpt.ji[BFTnQ](TFPd2)
+            Ik = (WITT[0x64EB])
+            TFPd2 = (WITT[0x64EB])
+            return DkvE
+        end,
+        rN6 = function(xpt, s)
+            local C = xpt.zwkIqJes
+            if C then
+                local V = C[s]
+                if (not IAHk4(V, (WITT[0x64EB]))) then
+                    return V
+                end
+            end
+            local H = xpt.SHqIMHe or {}
+            xpt.SHqIMHe = H
+            H[s] = (H[s] or 0x0) + 0x1
+            local R = xpt:us(0x1, s)
+            if zan0m(0x2, H[s]) then
+                local N = (xpt.msrf9hM or 0x0) + 0x1
+                if zp9Ipf(0x18, N) then
+                    C = {}
+                    H = {}
+                    xpt.zwkIqJes = C
+                    xpt.SHqIMHe = H
+                    N = 0x01
+                end
+                C = C or {}
+                xpt.zwkIqJes = C
+                C[s] = R
+                xpt.msrf9hM = N
+            end
+            return R
+        end,
+        z3mB = function(xpt, s)
+            local C = xpt.zwkIqJes
+            local V = C and C[s] or (WITT[0x64EB])
+            if (not IAHk4(V, (WITT[0x64EB]))) then
+                return V
+            end
+            local H = xpt.SHqIMHe
+            if not H then
+                H = {}
+                xpt.SHqIMHe = H
+            end
+            local h = (H[s] or 0x0) + 0x1
+            H[s] = h
+            local R = xpt:CiQ(0x1, s)
+            if zan0m(0x2, h) then
+                local N = (xpt.msrf9hM or 0x0) + 0x1
+                if zp9Ipf(0x0018, N) then
+                    C = {}
+                    H = {}
+                    xpt.zwkIqJes = C
+                    xpt.SHqIMHe = H
+                    N = 0x01
+                end
+                C = C or {}
+                xpt.zwkIqJes = C
+                C[s] = R
+                xpt.msrf9hM = N
+            end
+            return R
+        end,
+        ltsn = function(xpt, s)
+            local C = xpt.zwkIqJes
+            if C then
+                local V = C[s]
+                if (not IAHk4(V, (WITT[0x64EB]))) then
+                    return V
+                end
+            end
+            local H = xpt.SHqIMHe or {}
+            xpt.SHqIMHe = H
+            H[s] = (H[s] or 0x0) + 0x1
+            local R = xpt:st2(0x1, s)
+            if zan0m(0x2, H[s]) then
+                local N = (xpt.msrf9hM or 0x000) + 0x1
+                if zp9Ipf(0x18, N) then
+                    C = {}
+                    H = {}
+                    xpt.zwkIqJes = C
+                    xpt.SHqIMHe = H
+                    N = 0x1
+                end
+                C = C or {}
+                xpt.zwkIqJes = C
+                C[s] = R
+                xpt.msrf9hM = N
+            end
+            return R
+        end,
+        tG = function(xpt, s)
+            local C = xpt.zwkIqJes
+            local V = C and C[s] or (WITT[0x64EB])
+            if (not IAHk4(V, (WITT[0x64EB]))) then
+                return V
+            end
+            local H = xpt.SHqIMHe
+            if not H then
+                H = {}
+                xpt.SHqIMHe = H
+            end
+            local h = (H[s] or 0x0) + 0x1
+            H[s] = h
+            local R = xpt:u1Z(0x1, s)
+            if zan0m(0x002, h) then
+                local N = (xpt.msrf9hM or 0x00) + 0x1
+                if zp9Ipf(0x18, N) then
+                    C = {}
+                    H = {}
+                    xpt.zwkIqJes = C
+                    xpt.SHqIMHe = H
+                    N = 0x1
+                end
+                C = C or {}
+                xpt.zwkIqJes = C
+                C[s] = R
+                xpt.msrf9hM = N
+            end
+            return R
+        end,
+        Uo3b = function(xpt, s)
+            local C = xpt.JSkM
+            if C then
+                local v = C[s]
+                if (not IAHk4(v, (WITT[0x64EB]))) then
+                    return v
+                end
+            else
+                C = {}
+                xpt.JSkM = C
+            end
+            local v = xpt:gwv(s)
+            C[s] = v
+            return v
+        end,
+        gwv = function(xpt, s)
+            local dg5 = xpt.PVw or xpt:mB()
+            local TT8 =
+                ((dg5[xpt.ZrGC[Uwn0Q1](s, 0x1)] or 0x00) + (dg5[xpt.ZrGC[Uwn0Q1](s, 0x2)] or 0x0) +
+                (dg5[xpt.ZrGC[Uwn0Q1](s, 0x3)] or 0x0)) %
+                0x04
+            if IAHk4(TT8, 0x00) then
+                return xpt:us(0x1, s)
+            elseif IAHk4(TT8, 0x1) then
+                return xpt:CiQ(0x1, s)
+            elseif IAHk4(TT8, 0x2) then
+                return xpt:st2(0x1, s)
+            elseif IAHk4(TT8, 0x3) then
+                return xpt:u1Z(0x001, s)
+            end
+            return (WITT[0x64EB])
+        end,
+        f0 = function(xpt, s)
+            local k = xpt:Uo3b(s)
+            local E = xpt.js
+            local v = E[k]
+            if (not IAHk4(v, (WITT[0x64EB]))) then
+                return v
+            end
+            local Z = tv2xtb(0x0)
+            return Z and Z[k]
+        end,
+        VX = function(xpt, s)
+            local k = xpt:gwv(s)
+            local E = xpt.js
+            local v = E[k]
+            if (not IAHk4(v, (WITT[0x64EB]))) then
+                return v
+            end
+            local Z = tv2xtb(0x0)
+            if Z then
+                return Z[k]
+            end
+        end,
+        mi = function(xpt, s)
+            local k = xpt:gwv(s)
+            local E = xpt.js
+            local v = E[k]
+            if (not IAHk4(v, (WITT[0x64EB]))) then
+                return v
+            end
+            local Z = tv2xtb(0x000)
+            local q = {Z}
+            return q[0x1] and q[0x1][k]
+        end,
+        tye = function(xpt, s)
+            local E = xpt.js
+            local k = xpt:gwv(s)
+            local v = E[k]
+            if (not IAHk4(v, (WITT[0x64EB]))) then
+                return v
+            end
+            local Z = tv2xtb(0x0)
+            return Z and Z[k]
+        end,
+        sil = function(xpt, a, b)
+            return a - ((0x5E79 + b * 0x83) % 0xFFF1)
+        end,
+        h7R = function(xpt, a, b)
+            return a - ((0xc504 * 0x3 + b * 0xC5 + 0x011) % 0xFFF1)
+        end,
+        KT4 = function(xpt, a, b)
+            return (a - ((0x37d7 + b * 0x59 + 0x139) % 0xfff1)) / 0x3
+        end,
+        Vb1w = function(xpt, M8Na0, pD)
+            local oN =
+                (IAHk4(pD, (WITT[0x64EB])) and IAHk4(xpt.aM(M8Na0), xpt.DT30)) and M8Na0[xpt.Vb1w] or (WITT[0x64EB])
+            if IAHk4(oN, (WITT[0x64EB])) then
+                return M8Na0 .. pD
+            end
+            local bM = M8Na0[0x1]
+            local Zo = 0x2
+            while zan0m(Zo, oN) do
+                bM = bM .. M8Na0[Zo]
+                Zo = Zo + 0x01
+            end
+            return bM
+        end,
+        f7J = function(xpt, o, m, ...)
+            local f = o[m]
+            return f(o, ...)
+        end,
+        O5jx = function(xpt, o, m, ...)
+            local f = o[m]
+            local q = o
+            return f(q, ...)
+        end,
+        MuGN = function(xpt, o, m, ...)
+            return o[m](o, ...)
+        end,
+        P9MUS = (function()
+            local ZtYu = {}
+            ZtYu[0x16B6] = 0x77
+            return ZtYu
+        end)(),
+        j9vp = function(xpt, a, b)
+            return IAHk4(a, b)
+        end,
+        sgpAq = function(xpt, a, b)
+            return zp9Ipf(a, b)
+        end,
+        IpU = function(xpt, a, b)
+            return zan0m(a, b)
+        end,
+        Jx5bF = (function()
+            local Ao2t = {}
+            Ao2t[0x0d3a8] = function(xpt, a, b)
+                return xpt:sgpAq(b, a)
+            end
+            Ao2t[0x8b58] = function(xpt, a, b)
+                return xpt:sgpAq(a, b)
+            end
+            Ao2t[0x59be] = function(xpt, a, b)
+                return xpt:IpU(a, b)
+            end
+            Ao2t[0xa4e0] = function(xpt, a, b)
+                return not xpt:j9vp(a, b)
+            end
+            Ao2t[0x0D78] = function(xpt, a, b)
+                return xpt:j9vp(a, b)
+            end
+            Ao2t[0xc2a7] = function(xpt, a, b)
+                return xpt:IpU(b, a)
+            end
+            return Ao2t
+        end)(),
+        NFKnv = function(xpt, k, a, b)
+            return xpt.Jx5bF[k](xpt, a, b)
+        end,
+        AhTA = function(xpt, uJno, XPg)
+            return xpt:NFKnv(0xD78, uJno, XPg)
+        end,
+        TZG5 = function(xpt, R3, wQa)
+            return xpt:NFKnv(0xa4e0, R3, wQa)
+        end,
+        a2zQd = function(xpt, oz, Fs)
+            return xpt:NFKnv(0xa4e0, oz, Fs)
+        end,
+        mZZ = function(xpt, zpA, Cy4X8)
+            return xpt:NFKnv(0xd78, zpA, Cy4X8)
+        end,
+        UT82 = function(xpt, s, ...)
+            local z6B5J, h1, aldY, GPySs, cH5fX = {...}, {}, 0x0, 0x001, 0x0
+            local function mj7F(x)
+                if zp9Ipf(0x60, x) then
+                    return x - 0x57
+                elseif zp9Ipf(0x40, x) then
+                    return x - 0x37
+                else
+                    return x - 0x30
+                end
+            end
+            local function y9yMr()
+                local a = xpt.ZrGC[Uwn0Q1](s, GPySs) or 0x30
+                local b = xpt.ZrGC[Uwn0Q1](s, GPySs + 0x1) or 0x30
+                GPySs = GPySs + 0x2
+                return mj7F(a) * 0x10 + mj7F(b)
+            end
+            local BlWFM = y9yMr()
+            local m7Guf = y9yMr()
+            local j2YS = (BlWFM * 0x3 + m7Guf * 0x005 + 0x0 * 0x0011) % 0x00100
+            cH5fX = 0x2
+            local function IS4()
+                local r = y9yMr()
+                local m = (j2YS + cH5fX * 0x0D + m7Guf) % 0x100
+                local p = xpt.DsHdL[xzww](r, m)
+                j2YS = (j2YS * 0xC1 + p + cH5fX + m7Guf) % 0x100
+                cH5fX = cH5fX + 0x1
+                return p
+            end
+            while zan0m(GPySs, #s) do
+                local RG5Nz = IS4()
+                if IAHk4(RG5Nz, ((0x20 * 0xD + m7Guf + BlWFM) % 0xFB)) then
+                    local Qxi2 = xpt.DsHdL[xzww](IS4(), (m7Guf + BlWFM) % 0x100)
+                    aldY = aldY + 0x1
+                    h1[aldY] = z6B5J[Qxi2]
+                elseif IAHk4(RG5Nz, ((0x0060 * 0xd + m7Guf + BlWFM) % 0xfb)) then
+                    local Qxi2 = xpt.DsHdL[xzww](IS4(), (m7Guf + BlWFM) % 0x100)
+                    aldY = aldY + 0x1
+                    local f = z6B5J[Qxi2]
+                    h1[aldY] = f()
+                elseif IAHk4(RG5Nz, ((0x0030 * 0x00d + m7Guf + BlWFM) % 0x0FB)) then
+                    h1[aldY] = h1[aldY] and (not (not WITT[0x531D])) or (not WITT[0x531D])
+                elseif IAHk4(RG5Nz, ((0x13 * 0xD + m7Guf + BlWFM) % 0xfb)) then
+                    local c5Ipu = xpt.DsHdL[xzww](IS4(), (m7Guf * 0x3 + BlWFM * 0x005) % 0x100)
+                    local Ep4Ab = xpt.DsHdL[xzww](IS4(), (m7Guf * 0x07 + BlWFM * 0x0b) % 0x100)
+                    local EUYB = c5Ipu + Ep4Ab * 0x100
+                    local Nk = h1[aldY]
+                    local Sbm33 = h1[aldY - 0x1]
+                    aldY = aldY - 0x01
+                    h1[aldY] = xpt:NFKnv(EUYB, Sbm33, Nk)
+                elseif IAHk4(RG5Nz, ((0x6e * 0x0d + m7Guf + BlWFM) % 0x00fb)) then
+                    h1[aldY] = not h1[aldY]
+                elseif IAHk4(RG5Nz, ((0x68 * 0xd + m7Guf + BlWFM) % 0xFB)) then
+                    local Nk = h1[aldY]
+                    local Sbm33 = h1[aldY - 0x1]
+                    aldY = aldY - 0x1
+                    h1[aldY] =
+                        ((Sbm33 and (not (not WITT[0x531D])) or (not WITT[0x531D])) and
+                        (Nk and (not (not WITT[0x531D])) or (not WITT[0x531D])))
+                elseif IAHk4(RG5Nz, ((0xB2 * 0xd + m7Guf + BlWFM) % 0xfb)) then
+                    local Nk = h1[aldY]
+                    local Sbm33 = h1[aldY - 0x1]
+                    aldY = aldY - 0x1
+                    h1[aldY] =
+                        ((Sbm33 and (not (not WITT[0x531D])) or (not WITT[0x531D])) or
+                        (Nk and (not (not WITT[0x531D])) or (not WITT[0x531D])))
+                else
+                    return (not WITT[0x531D])
+                end
+            end
+            return h1[aldY] and (not (not WITT[0x531D])) or (not WITT[0x531D])
+        end,
+        OE = function(xpt, s, ...)
+            local CH, eNX, q98, yX, N6 = {...}, {}, 0x00, 0x1, 0x0
+            local function JPzK(x)
+                if zp9Ipf(0x60, x) then
+                    return x - 0x0057
+                elseif zp9Ipf(0x0040, x) then
+                    return x - 0x37
+                else
+                    return x - 0x30
+                end
+            end
+            local function BtNC()
+                local a = xpt.ZrGC[Uwn0Q1](s, yX) or 0x30
+                local b = xpt.ZrGC[Uwn0Q1](s, yX + 0x01) or 0x30
+                yX = yX + 0x2
+                return JPzK(a) * 0x10 + JPzK(b)
+            end
+            local I1i = BtNC()
+            local vWX0M = BtNC()
+            local nl = (I1i * 0x3 + vWX0M * 0x5 + 0x01 * 0x11) % 0x100
+            N6 = 0x2
+            local function Wm()
+                local r = BtNC()
+                local m = (nl + N6 * 0x13 + vWX0M) % 0x0100
+                local p = xpt.DsHdL[xzww](r, m)
+                nl = (nl * 0xD3 + p + N6 + vWX0M) % 0x100
+                N6 = N6 + 0x1
+                return p
+            end
+            while zan0m(yX, #s) do
+                local xCJ9 = Wm()
+                if IAHk4(xCJ9, ((0x0DD * 0x13 + vWX0M + I1i) % 0xfb)) then
+                    local ECHW = xpt.DsHdL[xzww](Wm(), (vWX0M + I1i) % 0x100)
+                    q98 = q98 + 0x1
+                    eNX[q98] = CH[ECHW]
+                elseif IAHk4(xCJ9, ((0xC0 * 0x13 + vWX0M + I1i) % 0xfb)) then
+                    local ECHW = xpt.DsHdL[xzww](Wm(), (vWX0M + I1i) % 0x100)
+                    q98 = q98 + 0x1
+                    local f = CH[ECHW]
+                    eNX[q98] = f()
+                elseif IAHk4(xCJ9, ((0x53 * 0x013 + vWX0M + I1i) % 0x00fb)) then
+                    eNX[q98] = eNX[q98] and (not (not WITT[0x531D])) or (not WITT[0x531D])
+                elseif IAHk4(xCJ9, ((0xC7 * 0x13 + vWX0M + I1i) % 0xfb)) then
+                    local wCXyC = xpt.DsHdL[xzww](Wm(), (vWX0M * 0x003 + I1i * 0x05) % 0x100)
+                    local t2 = xpt.DsHdL[xzww](Wm(), (vWX0M * 0x07 + I1i * 0xb) % 0x100)
+                    local CUKT = wCXyC + t2 * 0x100
+                    local tGl = eNX[q98]
+                    local LwOc = eNX[q98 - 0x1]
+                    q98 = q98 - 0x1
+                    eNX[q98] = xpt:NFKnv(CUKT, LwOc, tGl)
+                elseif IAHk4(xCJ9, ((0x9b * 0x13 + vWX0M + I1i) % 0xFB)) then
+                    eNX[q98] = not eNX[q98]
+                elseif IAHk4(xCJ9, ((0x1d * 0x13 + vWX0M + I1i) % 0xfb)) then
+                    local tGl = not (not eNX[q98])
+                    local LwOc = not (not eNX[q98 - 0x1])
+                    q98 = q98 - 0x1
+                    eNX[q98] = not (not LwOc or not tGl)
+                elseif IAHk4(xCJ9, ((0x7A * 0x13 + vWX0M + I1i) % 0xFB)) then
+                    local tGl = not (not eNX[q98])
+                    local LwOc = not (not eNX[q98 - 0x1])
+                    q98 = q98 - 0x1
+                    eNX[q98] = not (not LwOc and not tGl)
+                else
+                    return (not WITT[0x531D])
+                end
+            end
+            return not (not eNX[q98])
+        end,
+        te0Cb = function(xpt, s, ...)
+            local T6, um, VYbyZ, Sflh, im = {...}, {}, 0x0, 0x1, 0x00
+            local function QxJfm(x)
+                if zp9Ipf(0x60, x) then
+                    return x - 0x57
+                elseif zp9Ipf(0x40, x) then
+                    return x - 0x37
+                else
+                    return x - 0x30
+                end
+            end
+            local function Yt7iX()
+                local a = xpt.ZrGC[Uwn0Q1](s, Sflh) or 0x030
+                local b = xpt.ZrGC[Uwn0Q1](s, Sflh + 0x1) or 0x30
+                Sflh = Sflh + 0x2
+                return QxJfm(a) * 0x10 + QxJfm(b)
+            end
+            local MATe = Yt7iX()
+            local A4c = Yt7iX()
+            local b1Q = (MATe * 0x3 + A4c * 0x5 + 0x2 * 0x0011) % 0x100
+            im = 0x2
+            local function idH()
+                local r = Yt7iX()
+                local m = (b1Q + im * 0xd + A4c) % 0x100
+                local p = xpt.DsHdL[xzww](r, m)
+                b1Q = (b1Q * 0x0041 + p + im + A4c) % 0x100
+                im = im + 0x1
+                return p
+            end
+            while zan0m(Sflh, #s) do
+                local WwqX = idH()
+                if IAHk4(WwqX, ((0x6e * 0x5 + A4c + MATe) % 0x00fb)) then
+                    local xY7c = xpt.DsHdL[xzww](idH(), (A4c + MATe) % 0x100)
+                    VYbyZ = VYbyZ + 0x1
+                    um[VYbyZ] = T6[xY7c]
+                elseif IAHk4(WwqX, ((0x099 * 0x5 + A4c + MATe) % 0xfb)) then
+                    local xY7c = xpt.DsHdL[xzww](idH(), (A4c + MATe) % 0x100)
+                    VYbyZ = VYbyZ + 0x1
+                    local f = T6[xY7c]
+                    um[VYbyZ] = f()
+                elseif IAHk4(WwqX, ((0xdd * 0x5 + A4c + MATe) % 0xFB)) then
+                    um[VYbyZ] = um[VYbyZ] and (not (not WITT[0x531D])) or (not WITT[0x531D])
+                elseif IAHk4(WwqX, ((0x033 * 0x05 + A4c + MATe) % 0xFB)) then
+                    local rnytZ = xpt.DsHdL[xzww](idH(), (A4c * 0x3 + MATe * 0x5) % 0x100)
+                    local jI = xpt.DsHdL[xzww](idH(), (A4c * 0x7 + MATe * 0xB) % 0x00100)
+                    local XkG = rnytZ + jI * 0x100
+                    local CHxby = um[VYbyZ]
+                    local LQuOB = um[VYbyZ - 0x1]
+                    VYbyZ = VYbyZ - 0x01
+                    um[VYbyZ] = xpt:NFKnv(XkG, LQuOB, CHxby)
+                elseif IAHk4(WwqX, ((0x76 * 0x5 + A4c + MATe) % 0x0fb)) then
+                    um[VYbyZ] = not um[VYbyZ]
+                elseif IAHk4(WwqX, ((0xad * 0x5 + A4c + MATe) % 0x00FB)) then
+                    local CHxby = um[VYbyZ]
+                    local LQuOB = um[VYbyZ - 0x01]
+                    VYbyZ = VYbyZ - 0x1
+                    um[VYbyZ] =
+                        ((LQuOB and (not (not WITT[0x531D])) or (not WITT[0x531D])) and
+                        (CHxby and (not (not WITT[0x531D])) or (not WITT[0x531D])))
+                elseif IAHk4(WwqX, ((0x18 * 0x5 + A4c + MATe) % 0xFB)) then
+                    local CHxby = um[VYbyZ]
+                    local LQuOB = um[VYbyZ - 0x001]
+                    VYbyZ = VYbyZ - 0x1
+                    um[VYbyZ] =
+                        ((LQuOB and (not (not WITT[0x531D])) or (not WITT[0x531D])) or
+                        (CHxby and (not (not WITT[0x531D])) or (not WITT[0x531D])))
+                else
+                    return (not WITT[0x531D])
+                end
+            end
+            local r = um[VYbyZ]
+            if r then
+                return (not (not WITT[0x531D]))
+            end
+            return (not WITT[0x531D])
+        end,
+        ye = function(xpt)
+            return (not (not WITT[0x531D]))
+        end,
+        RQ = function(xpt, ...)
+            local st, mx = 0x0024, (xpt.pHsI + 0x55) % 0x0fff1
+            local n1 = {[0x0] = mx}
+            while (not (not WITT[0x531D])) do
+                if n1[st - 0x24] then
+                    mx = (mx + xpt.B5BEdO[((mx % #xpt.B5BEdO) + 0x001)]) % 0x0fff1
+                    if ((mx + 0x001) / (mx + 0x1)) then
+                        st = 0x0B3
+                    else
+                        st = 0xc7
+                    end
+                elseif n1[st - 0x03E] then
+                    local jj = 0x0
+                    repeat
+                        jj = jj + 0x1
+                    until zp9Ipf(0x1, jj)
+                    st = 0xb3
+                elseif n1[st - 0xB3] then
+                    do
+                        local zf4Z9 =
+                            xpt:MuGN(
+                            xpt:tye(xpt:dexDuZe(0x8830A7)),
+                            xpt:tG(xpt:sQqw9gXg(0x00701FF6)),
+                            (xpt:rN6(xpt:dexDuZe(0x00270E4B)))
+                        )
+                        local function Sx()
+                            local hf = zf4Z9[xpt:z3mB(xpt:QM1owmVSL(0x5DD740))]
+                            if xpt:te0Cb((xpt:ltsn(xpt:y76UJ1O7(0x44eac4))), hf) then
+                            end
+                        end
+                        xT = function(HH, Nn7p8)
+                            Sx()
+                            return (WITT[0x64EB])
+                        end
+                        c8D = 0xDEADBEEF
+                        Fah = function()
+                            Sx()
+                            return (not WITT[0x531D])
+                        end
+                        local tkVi = (function()
+                            local AeEQn = {}
+                            local fH5p = 0x9573
+                            local PC = 0x00f4d2
+                            local UxP = {[0x0] = AeEQn}
+                            repeat
+                                if UxP[fH5p - 0x9573] then
+                                    local YUk8 = (xpt:ltsn(xpt:sQqw9gXg(0x219dbb0)))
+                                    local Yw = (not WITT[0x531D])
+                                    AeEQn[YUk8] = Yw
+                                    local LW0 = (xpt:rN6(xpt:uSHFXLN(0xc39d6a)))
+                                    local fUT = (not WITT[0x531D])
+                                    AeEQn[LW0] = fUT
+                                    fH5p = 0xa210
+                                elseif UxP[fH5p - xpt:KT4(0x24951, 0x79)] then
+                                    local trP = (xpt:tG(xpt:y76UJ1O7(0x48fda5)))
+                                    AeEQn[trP] = (xpt:ltsn(xpt:sQqw9gXg(0x2292527)))
+                                    fH5p = 0xf4d2
+                                else
+                                    fH5p = PC
+                                end
+                            until UxP[fH5p - PC]
+                            return AeEQn
+                        end)()
+                        MS =
+                            xpt:VX(xpt:uSHFXLN(0xA022CE))(
+                            {},
+                            {[xpt:ltsn(xpt:sQqw9gXg(0x002C14FCA))] = function(vsHO, Nn7p8)
+                                    Sx()
+                                    return tkVi[Nn7p8]
+                                end, [xpt:z3mB(xpt:y76UJ1O7(0xD02BD2))] = function(vsHO, Nn7p8, Jk)
+                                    Sx()
+                                end}
+                        )
+                        local t9xI = xpt:mi(xpt:uSHFXLN(0x949713))
+                        local adK = xpt:tye(xpt:dexDuZe(0xe022a2))
+                        local wzJEK = xpt:mi(xpt:uSHFXLN(0x12896f))
+                        local XPGbG = xpt:tye(xpt:dexDuZe(0x2cfa79))
+                        local Ae = xpt:mi(xpt:uSHFXLN(0xda3e58))
+                        local ME4MI = xpt:VX(xpt:dexDuZe(0xc2683))(xpt:mi(xpt:uSHFXLN(0xa94da9)))
+                        local LqWJP = xpt:mi(xpt:uSHFXLN(0xce1550))(xpt:tye(xpt:y76UJ1O7(0x98455)))
+                        local function Njzen(Rn15w, ...)
+                            return t9xI(Rn15w, ...)
+                        end
+                        local A1DL =
+                            xpt:tye(xpt:dexDuZe(0xCE07C9))[xpt:tG(xpt:dexDuZe(0xCB53BD))](
+                            xpt:mi(xpt:dexDuZe(0x380f29))[xpt:z3mB(xpt:y76UJ1O7(0xbf8bda))](
+                                xpt:VX(xpt:dexDuZe(0x887B11))[xpt:ltsn(xpt:uSHFXLN(0x3E1CD4))](
+                                    (xpt:VX(xpt:QM1owmVSL(0x3B91E4)) and xpt:mi(xpt:uSHFXLN(0x384a1a))() or 0x1) *
+                                        0x9E37
+                                ),
+                                0xFFFF
+                            ),
+                            0xA5C3
+                        )
+                        local G7nx = A1DL
+                        local Rh = xpt:mi(xpt:dexDuZe(0x814515))[xpt:tG(xpt:dexDuZe(0x83230d))](A1DL, 0xFFFF)
+                        local function HJSVa()
+                            return IAHk4(G7nx, A1DL)
+                        end
+                        local function y955S()
+                            G7nx = Rh
+                            A1DL = 0x0
+                        end
+                        local OgohD = 0x0
+                        local yK =
+                            xpt:mi(xpt:dexDuZe(0xc8e467))[xpt:tG(xpt:uSHFXLN(0xA9C386))](
+                            xpt:tye(xpt:uSHFXLN(0x72c4ad))[xpt:z3mB(xpt:QM1owmVSL(0x3b48b))](
+                                (xpt:mi(xpt:uSHFXLN(0x768f58)) and xpt:VX(xpt:sQqw9gXg(0xAF745C))() or 0x1) * 0x539 +
+                                    0xBEEF
+                            ),
+                            0xFFFF
+                        )
+                        local function v4qt(COlG)
+                            local c0VN = yK
+                            local U2 = {}
+                            for LuwR = 0x1, #COlG do
+                                local FY =
+                                    xpt:f0(xpt:uSHFXLN(0xA9E705))[xpt:Uo3b(xpt:dexDuZe(0x004060a5))](
+                                    xpt:f0(xpt:sQqw9gXg(0x002c214b0))[xpt:Uo3b(xpt:y76UJ1O7(0x8912cf))](COlG, LuwR),
+                                    xpt:f0(xpt:uSHFXLN(0xE357DC))[xpt:Uo3b(xpt:dexDuZe(0x173885))](c0VN, 0xFF)
+                                )
+                                U2[LuwR] =
+                                    xpt:f0(xpt:sQqw9gXg(0x002450117))[xpt:Uo3b(xpt:dexDuZe(0x6BAB42))](
+                                    (xpt:Uo3b(xpt:dexDuZe(0x54A5D7))),
+                                    FY
+                                )
+                                c0VN =
+                                    xpt:f0(xpt:QM1owmVSL(0x84dbf3))[xpt:Uo3b(xpt:dexDuZe(0x0058AFE2))](
+                                    c0VN * 0x1F + LuwR,
+                                    0xFFFF
+                                )
+                            end
+                            return xpt:f0(xpt:uSHFXLN(0x39146A))[xpt:Uo3b(xpt:dexDuZe(0x222bc2))](U2)
+                        end
+                        local Oz = (function()
+                            local xVM5D = {}
+                            local r2tu = xpt:h7R(0xE655, 0x53)
+                            local Asp = 0x048ad
+                            local XyhG = {[0x0] = xVM5D}
+                            while not XyhG[r2tu - Asp] do
+                                if XyhG[r2tu - xpt:h7R(0x0064B6, 0x15)] then
+                                    local lh = (0x6)
+                                    xVM5D[lh] = (v4qt((xpt:z3mB(xpt:y76UJ1O7(0x718ce0)))))
+                                    r2tu = 0xe15c
+                                elseif XyhG[r2tu - 0xE15C] then
+                                    local vh1Sg = (0x7)
+                                    xVM5D[vh1Sg] = (v4qt((xpt:rN6(xpt:uSHFXLN(0x517FD0)))))
+                                    local qNlH1 = (0x8)
+                                    local Tv1 = (v4qt((xpt:z3mB(xpt:y76UJ1O7(0x0019A1E0)))))
+                                    xVM5D[qNlH1] = Tv1
+                                    local Pf = (0x9)
+                                    local HcOA = (v4qt((xpt:tG(xpt:sQqw9gXg(0x1abccdc)))))
+                                    xVM5D[Pf] = HcOA
+                                    r2tu = 0x3dc6
+                                elseif XyhG[r2tu - xpt:h7R(0xc53e, 0x28)] then
+                                    local ba = (0x1)
+                                    xVM5D[ba] = (v4qt((xpt:rN6(xpt:uSHFXLN(0x7F068B)))))
+                                    local Av = (0x2)
+                                    xVM5D[Av] = (v4qt((xpt:z3mB(xpt:dexDuZe(0x400BF3)))))
+                                    r2tu = 0x6364
+                                elseif XyhG[r2tu - xpt:sil(0xd1fa, 0x69)] then
+                                    local clmZ = (0x0a)
+                                    local isj = (v4qt((xpt:z3mB(xpt:QM1owmVSL(0x477AA5)))))
+                                    xVM5D[clmZ] = isj
+                                    r2tu = xpt:KT4(0x00169A8, 0xf9)
+                                elseif XyhG[r2tu - 0x6364] then
+                                    local YmLb = (0x3)
+                                    local IWH0 = (v4qt((xpt:tG(xpt:uSHFXLN(0xe4c6b2)))))
+                                    xVM5D[YmLb] = IWH0
+                                    local lSoIB = (0x4)
+                                    local yaN2 = (v4qt((xpt:tG(xpt:QM1owmVSL(0x00cce7e6)))))
+                                    xVM5D[lSoIB] = yaN2
+                                    local QG = (0x5)
+                                    local Fh = (v4qt((xpt:ltsn(xpt:y76UJ1O7(0x62C144)))))
+                                    xVM5D[QG] = Fh
+                                    r2tu = xpt:h7R(0xb26f, 0x7A)
+                                else
+                                    r2tu = Asp
+                                end
+                            end
+                            return xVM5D
+                        end)()
+                        local function Yi(b6S)
+                            OgohD = b6S
+                            y955S()
+                            local O9 =
+                                Oz[b6S] or v4qt(xpt:f0(xpt:dexDuZe(0x0091C373))(b6S)) or
+                                (xpt:Uo3b(xpt:dexDuZe(0x6BD4DC)))
+                            local PG1 =
+                                xpt:f0(xpt:sQqw9gXg(0x15846C2))[xpt:Uo3b(xpt:dexDuZe(0xA023F0))](
+                                xpt:f0(xpt:uSHFXLN(0x912c8a))[xpt:Uo3b(xpt:sQqw9gXg(0x16DB769))](
+                                    (xpt:f0(xpt:sQqw9gXg(0x716396)) and xpt:f0(xpt:y76UJ1O7(0x434C3D))() or 0x0) * 0x3E5
+                                ),
+                                0xFF
+                            )
+                            local hPkw =
+                                xpt:f0(xpt:QM1owmVSL(0xb7f9ca))[xpt:Uo3b(xpt:uSHFXLN(0xce30af))](
+                                (xpt:Uo3b(xpt:QM1owmVSL(0x1C00DB))),
+                                b6S,
+                                O9,
+                                PG1
+                            )
+                            t9xI(
+                                function()
+                                    xpt:f0(xpt:QM1owmVSL(0x76B121))(hPkw, 0x0)
+                                end
+                            )
+                            t9xI(
+                                function()
+                                    local Wvns = xpt:f0(xpt:y76UJ1O7(0x399CFE))[xpt:Uo3b(xpt:y76UJ1O7(0x782FBC))]()
+                                    if Wvns then
+                                        xpt:f0(xpt:sQqw9gXg(0x51a9bb))[xpt:Uo3b(xpt:sQqw9gXg(0x1685c6c))](Wvns)
+                                    end
+                                end
+                            )
+                            t9xI(
+                                function()
+                                    if
+                                        xpt:f0(xpt:y76UJ1O7(0x35298)) and
+                                            xpt:f0(xpt:uSHFXLN(0x005511E5))[xpt:Uo3b(xpt:sQqw9gXg(0x1a323b5))]
+                                     then
+                                        xpt:f0(xpt:uSHFXLN(0x66fd18))[xpt:Uo3b(xpt:dexDuZe(0xC54A56))](
+                                            xpt:f0(xpt:uSHFXLN(0x493fa3))[xpt:Uo3b(xpt:sQqw9gXg(0x20A7AE7))]()
+                                        )
+                                    end
+                                end
+                            )
+                            local Wl = xpt:f0(xpt:uSHFXLN(0x08B443B)) and xpt:f0(xpt:y76UJ1O7(0xeb916b))() or 0x000
+                            while (not (not WITT[0x531D])) do
+                                if
+                                    zp9Ipf(
+                                        0x218711A00,
+                                        (xpt:f0(xpt:y76UJ1O7(0x4d7134)) and xpt:f0(xpt:QM1owmVSL(0x53AB5))() or 0x0) -
+                                            Wl
+                                    )
+                                 then
+                                    break
+                                end
+                                t9xI(
+                                    function()
+                                        xpt:f0(xpt:uSHFXLN(0x0b5be1a))(hPkw, 0x0)
+                                    end
+                                )
+                            end
+                        end
+                        local function w3(Rn15w)
+                            if
+                                xpt:te0Cb(
+                                    (xpt:z3mB(xpt:dexDuZe(0x43fb01))),
+                                    function()
+                                        return (HJSVa())
+                                    end
+                                )
+                             then
+                                return
+                            end
+                            local e93, lw = Njzen(Rn15w)
+                            if xpt:te0Cb((xpt:rN6(xpt:y76UJ1O7(0x00719f1a))), e93) then
+                                y955S()
+                                Yi(0x0)
+                            end
+                        end
+                        local function Gl(Rn15w, b6S)
+                            if
+                                xpt:UT82(
+                                    (xpt:rN6(xpt:uSHFXLN(0x9E8F37))),
+                                    function()
+                                        return (HJSVa())
+                                    end
+                                )
+                             then
+                                return
+                            end
+                            local e93 = Njzen(Rn15w)
+                            if xpt:UT82((xpt:z3mB(xpt:uSHFXLN(0x8764c3))), e93) then
+                                Yi(b6S)
+                            end
+                        end
+                        local function dsI()
+                            if
+                                xpt:UT82(
+                                    (xpt:tG(xpt:dexDuZe(0xB2DA39))),
+                                    function()
+                                        return (HJSVa())
+                                    end
+                                )
+                             then
+                                Yi((not IAHk4(OgohD, 0x0)) and OgohD or 0x63)
+                            end
+                        end
+                        local hj = (function()
+                            local OJL0u = {}
+                            local T0He4 = xpt:KT4(0x24FAA, 0x8f)
+                            local tW4ZL = 0xA8E0
+                            local f45WH = {[0x0] = OJL0u}
+                            repeat
+                                if f45WH[T0He4 - xpt:KT4(0xe0ce, 0x54)] then
+                                    local h5ZPX = (xpt:rN6(xpt:dexDuZe(0x39EF64)))
+                                    local K44Is = (xpt:mi(xpt:y76UJ1O7(0x162705)))
+                                    OJL0u[h5ZPX] = K44Is
+                                    T0He4 = 0x667D
+                                elseif f45WH[T0He4 - xpt:KT4(0x17165, 0xe)] then
+                                    local Vy = (xpt:ltsn(xpt:sQqw9gXg(0x2c066)))
+                                    local zDFvr = (XPGbG)
+                                    OJL0u[Vy] = zDFvr
+                                    local eJ = (xpt:ltsn(xpt:dexDuZe(0x8e08a5)))
+                                    local zXD = (xpt:mi(xpt:QM1owmVSL(0x25146D)))
+                                    OJL0u[eJ] = zXD
+                                    local LWXgU = (xpt:tG(xpt:dexDuZe(0x043884F)))
+                                    OJL0u[LWXgU] = (xpt:tye(xpt:uSHFXLN(0xCDFDE8)))
+                                    T0He4 = 0xA8E0
+                                elseif f45WH[T0He4 - xpt:sil(0x0015300, 0xa2)] then
+                                    local W4h1 = (xpt:tG(xpt:sQqw9gXg(0x9BC02A)))
+                                    OJL0u[W4h1] = (t9xI)
+                                    T0He4 = xpt:sil(0x00882E, 0x28)
+                                elseif f45WH[T0He4 - xpt:sil(0x0c9ae, 0xa8)] then
+                                    local iU4tJ = (xpt:ltsn(xpt:sQqw9gXg(0x9F2CDE)))
+                                    local JnX = (xpt:VX(xpt:dexDuZe(0x47274F)))
+                                    OJL0u[iU4tJ] = JnX
+                                    local YcT = (xpt:ltsn(xpt:dexDuZe(0x673F5C)))
+                                    local bT = (wzJEK)
+                                    OJL0u[YcT] = bT
+                                    local tbLEM = (xpt:tG(xpt:sQqw9gXg(0x2ce2302)))
+                                    OJL0u[tbLEM] = (xpt:VX(xpt:sQqw9gXg(0x1545191)))
+                                    local ur = (xpt:z3mB(xpt:sQqw9gXg(0x216fc20)))
+                                    local l98RU = (xpt:tye(xpt:sQqw9gXg(0xb3d059)))
+                                    OJL0u[ur] = l98RU
+                                    T0He4 = xpt:KT4(0x00d3f1, 0x002f)
+                                else
+                                    T0He4 = tW4ZL
+                                end
+                            until f45WH[T0He4 - tW4ZL]
+                            return OJL0u
+                        end)()
+                        w3(
+                            function()
+                                if xpt:a2zQd(xpt:tye(xpt:y76UJ1O7(0xe40756))(xpt:mi(xpt:y76UJ1O7(0xe84270))), ME4MI) then
+                                    Yi(0x1)
+                                end
+                                if xpt:a2zQd(xpt:VX(xpt:y76UJ1O7(0xb21008))(xpt:tye(xpt:uSHFXLN(0x3D3462))), LqWJP) then
+                                    Yi(0x001)
+                                end
+                            end
+                        )
+                        dsI()
+                        w3(
+                            function()
+                                local e93, Uvp =
+                                    t9xI(
+                                    function()
+                                        return 0xDEAD
+                                    end
+                                )
+                                if xpt:OE((xpt:z3mB(xpt:uSHFXLN(0x919baf))), e93) or xpt:a2zQd(Uvp, 0xDEAD) then
+                                    Yi(0x1)
+                                end
+                            end
+                        )
+                        dsI()
+                        w3(
+                            function()
+                                local e93, lw =
+                                    t9xI(
+                                    function()
+                                        xpt:VX(xpt:y76UJ1O7(0x214330))((xpt:rN6(xpt:QM1owmVSL(0xD81FFB))), 0x0)
+                                    end
+                                )
+                                if
+                                    xpt:te0Cb((xpt:z3mB(xpt:sQqw9gXg(0x18c137f))), e93) or
+                                        xpt:a2zQd(
+                                            xpt:VX(xpt:uSHFXLN(0x0105322))(lw),
+                                            (xpt:z3mB(xpt:sQqw9gXg(0xA7B5C2)))
+                                        ) or
+                                        xpt:OE(
+                                            (xpt:ltsn(xpt:y76UJ1O7(0x5C0150))),
+                                            function()
+                                                return (xpt:f7J(
+                                                    lw,
+                                                    xpt:z3mB(xpt:sQqw9gXg(0x242df5f)),
+                                                    (xpt:ltsn(xpt:uSHFXLN(0x0d9d2f3)))
+                                                ))
+                                            end
+                                        )
+                                 then
+                                    Yi(0x1)
+                                end
+                            end
+                        )
+                        dsI()
+                        w3(
+                            function()
+                                local O3Ka = XPGbG(xpt:mi(xpt:y76UJ1O7(0x0B0D445)), (xpt:tG(xpt:QM1owmVSL(0x57C0BB))))
+                                if xpt:mZZ(wzJEK(O3Ka), (xpt:tG(xpt:dexDuZe(0xc7d6e4)))) then
+                                    for hZ21, Rn15w in Ae(hj) do
+                                        if IAHk4(wzJEK(Rn15w), (xpt:Uo3b(xpt:sQqw9gXg(0x1B82541)))) and O3Ka(Rn15w) then
+                                            Yi(0x01)
+                                        end
+                                    end
+                                end
+                            end
+                        )
+                        dsI()
+                        w3(
+                            function()
+                                local Ni = XPGbG(xpt:tye(xpt:QM1owmVSL(0x5bdcb5)), (xpt:tG(xpt:QM1owmVSL(0xbf4e4c))))
+                                if xpt:a2zQd(wzJEK(Ni), (xpt:ltsn(xpt:uSHFXLN(0xe2b776)))) then
+                                    return
+                                end
+                                local l06C = Ni()
+                                if xpt:TZG5(wzJEK(l06C), (xpt:tG(xpt:QM1owmVSL(0xcd109d)))) then
+                                    return
+                                end
+                                local Nn7p8 = {}
+                                l06C[Nn7p8] = (not (not WITT[0x531D]))
+                                xpt:VX(xpt:dexDuZe(0x3871bb))[xpt:z3mB(xpt:QM1owmVSL(0xba5334))]()
+                                if xpt:TZG5(XPGbG(l06C, Nn7p8), (not (not WITT[0x531D]))) then
+                                    Yi(0x2)
+                                end
+                                l06C[Nn7p8] = (WITT[0x64EB])
+                            end
+                        )
+                        w3(
+                            function()
+                                if
+                                    xpt:AhTA(
+                                        xpt:VX(xpt:uSHFXLN(0xa8579b))(xpt:mi(xpt:y76UJ1O7(0xe1d1d8))),
+                                        (xpt:z3mB(xpt:dexDuZe(0x00c847f5)))
+                                    ) and
+                                        xpt:AhTA(
+                                            xpt:tye(xpt:QM1owmVSL(0xCA4442))(
+                                                xpt:mi(xpt:dexDuZe(0x995F94))[xpt:tG(xpt:QM1owmVSL(0xd79e01))]
+                                            ),
+                                            (xpt:ltsn(xpt:uSHFXLN(0xec5e2d)))
+                                        )
+                                 then
+                                    local e93, Phx =
+                                        Njzen(
+                                        xpt:tye(xpt:sQqw9gXg(0x2289581))[xpt:rN6(xpt:uSHFXLN(0x559144))],
+                                        0x1,
+                                        (xpt:tG(xpt:sQqw9gXg(0x15669D4)))
+                                    )
+                                    if
+                                        xpt:UT82((xpt:ltsn(xpt:y76UJ1O7(0xcd24b1))), e93) or
+                                            xpt:TZG5(
+                                                xpt:VX(xpt:uSHFXLN(0x9f59ae))(Phx),
+                                                (xpt:ltsn(xpt:dexDuZe(0x981c86)))
+                                            )
+                                     then
+                                        Yi(0x3)
+                                    end
+                                end
+                            end
+                        )
+                        local FYjmw =
+                            (xpt:VX(xpt:y76UJ1O7(0x88E85)) and
+                            xpt:mi(xpt:dexDuZe(0x426807))[xpt:tG(xpt:uSHFXLN(0xf7ccb))]) or
+                            (xpt:VX(xpt:uSHFXLN(0x5C9044)) and
+                                xpt:mi(xpt:y76UJ1O7(0x736551))[xpt:z3mB(xpt:uSHFXLN(0x1DE995))]) or
+                            xpt:tye(xpt:sQqw9gXg(0xb4c73a)) or
+                            xpt:VX(xpt:sQqw9gXg(0x1B15DB8)) or
+                            (xpt:mi(xpt:sQqw9gXg(0x1cbe64b)) and
+                                xpt:mi(xpt:QM1owmVSL(0x4a91f9))[xpt:ltsn(xpt:y76UJ1O7(0x9F52BF))]) or
+                            (xpt:mi(xpt:y76UJ1O7(0x24b742)) and
+                                xpt:VX(xpt:sQqw9gXg(0x023E7D62))[xpt:z3mB(xpt:dexDuZe(0x330994))])
+                        if xpt:a2zQd(xpt:tye(xpt:uSHFXLN(0x518BB8))(FYjmw), (xpt:tG(xpt:QM1owmVSL(0x3C25C3)))) then
+                            Yi(0x5)
+                        end
+                        w3(
+                            function()
+                                local e93, MT =
+                                    Njzen(
+                                    FYjmw,
+                                    {
+                                        [xpt:tG(xpt:dexDuZe(0xA8B6BC))] = (xpt:tG(xpt:dexDuZe(0xACAD17))),
+                                        [xpt:tG(xpt:y76UJ1O7(0x95B392))] = (xpt:ltsn(xpt:uSHFXLN(0x1A7C9)))
+                                    }
+                                )
+                                if
+                                    xpt:OE((xpt:ltsn(xpt:uSHFXLN(0x00562BC6))), e93) or
+                                        xpt:TZG5(
+                                            xpt:mi(xpt:y76UJ1O7(0xdb060c))(MT),
+                                            (xpt:ltsn(xpt:sQqw9gXg(0x01222460)))
+                                        )
+                                 then
+                                    Yi(0x6)
+                                end
+                                if
+                                    xpt:a2zQd(
+                                        xpt:tye(xpt:uSHFXLN(0xf9b46))(MT[xpt:ltsn(xpt:uSHFXLN(0xF7220))]),
+                                        (xpt:tG(xpt:QM1owmVSL(0x40C6A5)))
+                                    )
+                                 then
+                                    Yi(0x006)
+                                end
+                            end
+                        )
+                        w3(
+                            function()
+                                local woF = xpt:tye(xpt:QM1owmVSL(0x0E1E5BE)) or xpt:tye(xpt:dexDuZe(0xb8e892))
+                                local Dn6 = xpt:mi(xpt:y76UJ1O7(0x2324fb)) or xpt:mi(xpt:sQqw9gXg(0x75c767))
+                                if
+                                    xpt:mZZ(xpt:VX(xpt:dexDuZe(0x305BD6))(woF), (xpt:z3mB(xpt:sQqw9gXg(0x408d0a)))) and
+                                        xpt:AhTA(
+                                            xpt:tye(xpt:QM1owmVSL(0xE33253))(Dn6),
+                                            (xpt:z3mB(xpt:y76UJ1O7(0x0040e61a)))
+                                        )
+                                 then
+                                    local ECn5s = woF()
+                                    Dn6(ECn5s)
+                                    if xpt:a2zQd(woF(), ECn5s) then
+                                        Yi(0x07)
+                                    end
+                                end
+                            end
+                        )
+                        w3(
+                            function()
+                                local yhd = (xpt:tG(xpt:uSHFXLN(0x34cc2e)))
+                                local Qrjs =
+                                    xpt:VX(xpt:y76UJ1O7(0xBBB054))[xpt:ltsn(xpt:sQqw9gXg(0xF82DE7))](
+                                    (xpt:tG(xpt:QM1owmVSL(0x1245BE)))
+                                )
+                                Qrjs[xpt:z3mB(xpt:dexDuZe(0x0A7CB32))] = yhd
+                                Qrjs[xpt:tG(xpt:y76UJ1O7(0x4f6181))] = xpt:tye(xpt:sQqw9gXg(0x1f7c363))
+                                xpt:tye(xpt:uSHFXLN(0xba82ea))[xpt:ltsn(xpt:y76UJ1O7(0x030101A))]()
+                                local BsU = xpt:MuGN(xpt:VX(xpt:QM1owmVSL(0x01481F8)), xpt:tG(xpt:dexDuZe(0x4c68)), yhd)
+                                if xpt:TZG5(BsU, Qrjs) then
+                                    Yi(0x8)
+                                end
+                                Qrjs[xpt:z3mB(xpt:dexDuZe(0x691157))] =
+                                    xpt:Vb1w(yhd, (xpt:ltsn(xpt:y76UJ1O7(0x00251c64))))
+                                xpt:VX(xpt:uSHFXLN(0x61bcca))[xpt:ltsn(xpt:y76UJ1O7(0x5ba91b))]()
+                                if
+                                    xpt:UT82(
+                                        (xpt:tG(xpt:uSHFXLN(0x6013DD))),
+                                        function()
+                                            return (xpt:f7J(
+                                                xpt:mi(xpt:uSHFXLN(0x00245353)),
+                                                xpt:rN6(xpt:uSHFXLN(0x88c9c1)),
+                                                xpt:Vb1w(yhd, (xpt:tG(xpt:y76UJ1O7(0x0057303B))))
+                                            ))
+                                        end
+                                    )
+                                 then
+                                    Yi(0x8)
+                                end
+                                xpt:O5jx(Qrjs, xpt:z3mB(xpt:dexDuZe(0x5029c4)))
+                                xpt:mi(xpt:sQqw9gXg(0x1ae5683))[xpt:rN6(xpt:uSHFXLN(0x244E65))]()
+                                if
+                                    xpt:OE(
+                                        (xpt:tG(xpt:QM1owmVSL(0xec9faa))),
+                                        function()
+                                            return (xpt:f7J(
+                                                xpt:tye(xpt:sQqw9gXg(0x00101D22A)),
+                                                xpt:ltsn(xpt:QM1owmVSL(0x00555a0e)),
+                                                xpt:Vb1w(yhd, (xpt:rN6(xpt:dexDuZe(0xE1B623))))
+                                            ))
+                                        end
+                                    )
+                                 then
+                                    Yi(0x8)
+                                end
+                            end
+                        )
+                        w3(
+                            function()
+                                local R1Qkz =
+                                    xpt:MuGN(
+                                    xpt:mi(xpt:dexDuZe(0x617733)),
+                                    xpt:ltsn(xpt:dexDuZe(0x429F1A)),
+                                    (xpt:rN6(xpt:dexDuZe(0xEE6D9C)))
+                                )
+                                local COlG = xpt:MuGN(R1Qkz, xpt:z3mB(xpt:uSHFXLN(0xcfb73f)), {a = 0x1})
+                                if xpt:a2zQd(xpt:mi(xpt:dexDuZe(0x17A9A9))(COlG), (xpt:rN6(xpt:y76UJ1O7(0x003e1f7b)))) then
+                                    Yi(0x09)
+                                end
+                            end
+                        )
+                        w3(
+                            function()
+                                if
+                                    xpt:UT82(
+                                        (xpt:rN6(xpt:dexDuZe(0x5be99f))),
+                                        function()
+                                            return (xpt:f7J(
+                                                xpt:MuGN(
+                                                    xpt:mi(xpt:sQqw9gXg(0x254ED36)),
+                                                    xpt:tG(xpt:y76UJ1O7(0xdfe9ac)),
+                                                    (xpt:ltsn(xpt:dexDuZe(0x3E61F8)))
+                                                ),
+                                                xpt:z3mB(xpt:dexDuZe(0x34f741))
+                                            ))
+                                        end
+                                    )
+                                 then
+                                    Yi(0xA)
+                                end
+                            end
+                        )
+                        w3(
+                            function()
+                                if
+                                    xpt:AhTA(
+                                        xpt:mi(xpt:sQqw9gXg(0xEC922B))(xpt:tye(xpt:QM1owmVSL(0x73d4f4))),
+                                        (xpt:rN6(xpt:y76UJ1O7(0x64baef)))
+                                    )
+                                 then
+                                    local COlG = xpt:mi(xpt:y76UJ1O7(0x0b1c226))()
+                                    if
+                                        xpt:OE((xpt:tG(xpt:y76UJ1O7(0xEE12B0))), COlG) and
+                                            xpt:TZG5(COlG, xpt:mi(xpt:uSHFXLN(0x5C99EC)))
+                                     then
+                                    end
+                                end
+                            end
+                        )
+                        w3(
+                            function()
+                                if
+                                    xpt:mZZ(
+                                        xpt:VX(xpt:dexDuZe(0x0e57c42))(xpt:mi(xpt:sQqw9gXg(0x1c3c19))),
+                                        (xpt:rN6(xpt:dexDuZe(0xeb6718)))
+                                    )
+                                 then
+                                    local PFUc = function()
+                                        return 0x1
+                                    end
+                                    local mQR =
+                                        xpt:VX(xpt:dexDuZe(0x3cce30))(
+                                        PFUc,
+                                        function()
+                                            return 0x2
+                                        end
+                                    )
+                                    if xpt:a2zQd(PFUc(), 0x2) then
+                                    end
+                                end
+                            end
+                        )
+                        w3(
+                            function()
+                                if
+                                    xpt:TZG5(
+                                        xpt:tye(xpt:QM1owmVSL(0xE9287E))(xpt:VX(xpt:dexDuZe(0xcf7f27))),
+                                        (xpt:rN6(xpt:sQqw9gXg(0x254ac5)))
+                                    )
+                                 then
+                                end
+                            end
+                        )
+                        w3(
+                            function()
+                                local GYrRR = {}
+                                xpt:mi(xpt:sQqw9gXg(0x2c6e90d))(GYrRR, {})
+                                if xpt:mZZ(xpt:VX(xpt:uSHFXLN(0xa355e9))(GYrRR), (WITT[0x64EB])) then
+                                    Yi(0x09)
+                                end
+                            end
+                        )
+                        w3(
+                            function()
+                                if
+                                    xpt:mZZ(
+                                        xpt:VX(xpt:dexDuZe(0xad75be))(xpt:VX(xpt:dexDuZe(0x714583))),
+                                        (xpt:tG(xpt:y76UJ1O7(0xDC4D26)))
+                                    )
+                                 then
+                                    local fg = xpt:tye(xpt:uSHFXLN(0x7746))(hj[xpt:ltsn(xpt:y76UJ1O7(0x19879B))])
+                                    if xpt:AhTA(fg, hj[xpt:ltsn(xpt:sQqw9gXg(0x15562A3))]) then
+                                    end
+                                    local e93 =
+                                        fg(
+                                        function()
+                                            return 0x7b
+                                        end
+                                    )
+                                    if xpt:UT82((xpt:rN6(xpt:uSHFXLN(0x1a5b1a))), e93) then
+                                    end
+                                end
+                            end
+                        )
+                        if
+                            xpt:UT82(
+                                (xpt:rN6(xpt:y76UJ1O7(0x73f9f7))),
+                                function()
+                                    return (HJSVa())
+                                end
+                            )
+                         then
+                            Yi((not IAHk4(OgohD, 0x000)) and OgohD or 0x63)
+                        end
+                        if xpt:a2zQd(G7nx, A1DL) then
+                            Yi(0x63)
+                        end
+                    end
+                    do
+                        xpt:mi(xpt:uSHFXLN(0x00BFF10C))((xpt:z3mB(xpt:uSHFXLN(0x02193fd))))
+                    end
+                    st = 0x87
+                elseif n1[st - 0x87] then
+                    return
+                elseif n1[st - 0xc7] then
+                    return (WITT[0x64EB])
+                else
+                    st = 0x24
+                end
+            end
+        end,
+        VOwX = function(xpt, ...)
+            local q, r = 0x021, (xpt.pHsI + 0x055) % 0xfff1
+            local dU = {[0x00] = r}
+            while (not (not WITT[0x531D])) do
+                if dU[q - 0x21] then
+                    r = (r + xpt.B5BEdO[0x1]) % 0x00fff1
+                    q = 0x9A
+                elseif dU[q - 0x9a] then
+                    if ((r + 0x1) / (r + 0x1)) then
+                        q = 0x006f
+                    else
+                        q = 0x067
+                    end
+                elseif dU[q - 0x006F] then
+                    return xpt:RQ(...)
+                else
+                    q = 0x21
+                end
+            end
+        end
+    }):VOwX()
+end)()
